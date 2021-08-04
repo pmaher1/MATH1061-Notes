@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Logical Equivalences}
+\author{Paddy Maher}
+
+\begin{document}
+\maketitle
+
+Given any statement variables '\textit{p}', '\textit{q}' and '\textit{r}', a tautology '\textbf{t}' and contradiction '\textbf{c}', the following
+logical equivalences hold.
+
+
+\section{Commutative laws}
+\begin{itemize} 
+\item \textit{p} $\wedge$ \textit{q} $\equiv$ \textit{q} $\wedge$ \textit{p}
+\item \textit{p} $\lor$ \textit{q} $\equiv$ \textit{q} $\lor$ \textit{p}
+\end{itemize}
+
+\section{Associative laws}
+\begin{itemize}
+\item (\textit{p} $\wedge$ \textit{q}) $\wedge$ \textit{r} $\equiv$ \textit{p} $\wedge$ (\textit{q} $\wedge$ \textit{r})
+\item (\textit{p} $\lor$ \textit{q}) $\lor$ \textit{r} $\equiv$ \textit{p} $\lor$ (\textit{q} $\lor$ \textit{r})
+\end{itemize}
+
+\section{Distributive laws}
+\begin{itemize}
+\item \textit{p} $\wedge$ (\textit{q} $\lor$ \textit{r}) $\equiv$ (\textit{p} $\wedge$ \textit{q}) $\lor$ (\textit{p} $\wedge$ \textit{r})
+\item \textit{p} $\lor$ (\textit{q} $\wedge$ \textit{r}) $\equiv$ (\textit{p} $\lor$ \textit{q}) $\wedge$ (\textit{p} $\lor$ \textit{r})
+\end{itemize}
+
+\section{Identity laws}
+\begin{itemize}
+\item \textit{p} $\wedge$ \textbf{t} $\equiv$ \textit{p}
+\item \textit{p} $\lor$ \textbf{c} $\equiv$ \textit{p}
+\end{itemize}
+
+\section{Negation laws}
+\begin{itemize}
+\item \textit{p} $\lor$ $\sim$\textit{p} $\equiv$ \textbf{t}
+\item \textit{p} $\wedge$ $\sim$\textit{p} $\equiv$ \textbf{c}
+\end{itemize}
+
+\section{Double negative laws}
+\begin{itemize}
+\item $\sim$($\sim$\textit{p}) $\equiv$ \textit{p}
+\end{itemize}
+
+\section{Idempotent laws}
+\begin{itemize}
+\item \textit{p} $\lor$ \textit{p} $\equiv$ \textit{p}
+\item \textit{p} $\wedge$ \textit{p} $\equiv$ \textit{p}
+\end{itemize}
+
+\section{Universal bound laws}
+\begin{itemize}
+\item \textit{p} $\lor$ \textbf{t} $\equiv$ \textbf{t}
+\item \textit{p} $\wedge$ \textbf{c} $\equiv$ \textbf{c}
+\end{itemize}
+
+\section{De Morgan's laws}
+\begin{itemize}
+\item $\sim$(\textit{p} $\wedge$ \textit{q}) $\equiv$ $\sim$\textit{p} $\lor$ $\sim$\textit{q}
+\item $\sim$(\textit{p} $\lor$ \textit{q}) $\equiv$ $\sim$\textit{p} $\wedge$ $\sim$\textit{q}
+\end{itemize}
+
+\section{Absorption laws}
+\begin{itemize}
+\item \textit{p} $\lor$ (\textit{p} $\wedge$ \textit{q}) $\equiv$ \textit{p}
+\item \textit{p} $\wedge$ (\textit{p} $\lor$ \textit{q}) $\equiv$ \textit{p}
+\end{itemize}
+
+\section{Negations of t and c}
+\begin{itemize}
+\item $\sim$\textbf{t} $\equiv$ \textbf{c}
+\item $\sim$\textbf{c} $\equiv$ \textbf{t}
+\end{itemize}
+
+\end{document}

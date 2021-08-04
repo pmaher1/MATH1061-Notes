@@ -1,0 +1,154 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{MATH1061 Course Notes}
+\author{Paddy Maher}
+\date{29th of July, 2021}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{Logic}
+\subsection{Logical Connectives}
+\subsubsection{Basic logical connectives}
+For a given logical statement come logical connectives. Basic logical connectives include:
+\begin{itemize}
+\item \textbf{not} = $\sim$
+\item \textbf{and} = $\wedge$
+\item \textbf{or} = $\lor$
+\item \textbf{exclusive or} = $\oplus$
+\end{itemize}
+
+\subsubsection{Logical Equivalence}
+Given two statement forms, you can show that they are logically equivalent by using a truth table or by using 
+the laws of logical equivalence. \\
+The logical equivalence between two statements is demonstrated by the symbol $\equiv$
+
+[insert truth table]
+
+\subsubsection{Conditional logical connectives}
+Logical connectives and equivalences, for given truth statements '\textit{p}' and '\textit{q}'
+\begin{itemize}
+\item \textbf{if .. then} = $\rightarrow$
+\item \textbf{if and only if} = $\leftrightarrow$
+\item \textit{p} $\rightarrow$ \textit{q} $\equiv$ 
+$\sim$ \textit{p} $\lor$ \textit{q} $\equiv$ 
+$\sim$ \textit{q} $\rightarrow$ $\sim$ \textit{p}
+\end{itemize}
+
+\subsubsection{Order of Operations}
+\begin{enumerate}
+\item $\sim$
+\item $\wedge$ and $\lor$, use parentheses to specify. If no parentheses given, work from left to right.
+\item  $\rightarrow$ and $\leftrightarrow$, use parentheses to specify. If no parentheses given, work from left to right.
+\end{enumerate}
+
+\subsection{Necessary and sufficient conditions}
+For given truth statements '\textit{p}' and '\textit{q}':
+\begin{itemize}
+\item \textit{p} is a necessary condition for \textit{q} means "if $\sim$\textit{p} then $\sim$\textit{q}" or
+equivalently "if \textit{q} then \textit{p}" or "\textit{q} only if \textit{p}".
+\item \textit{p} is a sufficient condition for \textit{q} means "if \textit{p} then \textit{q}" or equivalently
+"\textit{q} if \textit{p}"
+\end{itemize}
+
+\subsection{Definitions}
+\subsubsection{Tautology and contradictions}
+\begin{itemize}
+\item A \underline{tautology} is a statement form which always takes truth values "\textbf{true}" for all possible
+truth values of its variables.
+\item A \underline{contradiction} is a statement form which always takes truth values "\textbf{false}" for all possible
+truth values of its variables.
+\end{itemize}
+
+\subsubsection{Contrapositive}
+For given truth statements '\textit{p}' and '\textit{q}' \\
+The \underline{contrapositive} of \textit{p} $\rightarrow$ \textit{q} is $\sim$\textit{q} $\rightarrow$ $\sim$\textit{p}
+\begin{itemize}
+\item These are logically equivalent: \\
+\textit{p} $\rightarrow$ \textit{q} $\equiv$  $\sim$\textit{q} $\rightarrow$ $\sim$\textit{p}
+\end{itemize}
+
+\subsubsection{Biconditional}
+For given truth statements '\textit{p}' and '\textit{q}' \\
+The \underline{biconditional} of  \textit{p} and \textit{q}, denoted \textit{p} $\leftrightarrow$ \textit{q},
+ is defined by the following truth table:
+
+[insert truth table]
+
+\section{Logical Equivalences}
+
+Given any statement variables '\textit{p}', '\textit{q}' and '\textit{r}', a tautology '\textbf{t}' and contradiction '\textbf{c}', the following
+logical equivalences hold.
+
+
+\subsection{Commutative laws}
+\begin{itemize} 
+\item \textit{p} $\wedge$ \textit{q} $\equiv$ \textit{q} $\wedge$ \textit{p}
+\item \textit{p} $\lor$ \textit{q} $\equiv$ \textit{q} $\lor$ \textit{p}
+\end{itemize}
+
+\subsection{Associative laws}
+\begin{itemize}
+\item (\textit{p} $\wedge$ \textit{q}) $\wedge$ \textit{r} $\equiv$ \textit{p} $\wedge$ (\textit{q} $\wedge$ \textit{r})
+\item (\textit{p} $\lor$ \textit{q}) $\lor$ \textit{r} $\equiv$ \textit{p} $\lor$ (\textit{q} $\lor$ \textit{r})
+\end{itemize}
+
+\subsection{Distributive laws}
+\begin{itemize}
+\item \textit{p} $\wedge$ (\textit{q} $\lor$ \textit{r}) $\equiv$ (\textit{p} $\wedge$ \textit{q}) $\lor$ (\textit{p} $\wedge$ \textit{r})
+\item \textit{p} $\lor$ (\textit{q} $\wedge$ \textit{r}) $\equiv$ (\textit{p} $\lor$ \textit{q}) $\wedge$ (\textit{p} $\lor$ \textit{r})
+\end{itemize}
+
+\subsection{Identity laws}
+\begin{itemize}
+\item \textit{p} $\wedge$ \textbf{t} $\equiv$ \textit{p}
+\item \textit{p} $\lor$ \textbf{c} $\equiv$ \textit{p}
+\end{itemize}
+
+\subsection{Negation laws}
+\begin{itemize}
+\item \textit{p} $\lor$ $\sim$\textit{p} $\equiv$ \textbf{t}
+\item \textit{p} $\wedge$ $\sim$\textit{p} $\equiv$ \textbf{c}
+\end{itemize}
+
+\subsection{Double negative laws}
+\begin{itemize}
+\item $\sim$($\sim$\textit{p}) $\equiv$ \textit{p}
+\end{itemize}
+
+\subsection{Idempotent laws}
+\begin{itemize}
+\item \textit{p} $\lor$ \textit{p} $\equiv$ \textit{p}
+\item \textit{p} $\wedge$ \textit{p} $\equiv$ \textit{p}
+\end{itemize}
+
+\subsection{Universal bound laws}
+\begin{itemize}
+\item \textit{p} $\lor$ \textbf{t} $\equiv$ \textbf{t}
+\item \textit{p} $\wedge$ \textbf{c} $\equiv$ \textbf{c}
+\end{itemize}
+
+\subsection{De Morgan's laws}
+\begin{itemize}
+\item $\sim$(\textit{p} $\wedge$ \textit{q}) $\equiv$ $\sim$\textit{p} $\lor$ $\sim$\textit{q}
+\item $\sim$(\textit{p} $\lor$ \textit{q}) $\equiv$ $\sim$\textit{p} $\wedge$ $\sim$\textit{q}
+\end{itemize}
+
+\subsection{Absorption laws}
+\begin{itemize}
+\item \textit{p} $\lor$ (\textit{p} $\wedge$ \textit{q}) $\equiv$ \textit{p}
+\item \textit{p} $\wedge$ (\textit{p} $\lor$ \textit{q}) $\equiv$ \textit{p}
+\end{itemize}
+
+\subsection{Negations of t and c}
+\begin{itemize}
+\item $\sim$\textbf{t} $\equiv$ \textbf{c}
+\item $\sim$\textbf{c} $\equiv$ \textbf{t}
+\end{itemize}
+
+
+\end{document}
