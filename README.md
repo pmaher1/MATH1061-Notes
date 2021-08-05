@@ -1,5 +1,5 @@
-# mytutjava
-My solutions for university questions on Java
+# MATH1061-Notes
+My notes for one of my university courses, MATH1061
 
 ## Progress
 
