@@ -5,7 +5,6 @@
 \usepackage{graphicx}
 \title{MATH1061 Course Notes}
 \author{Paddy Maher}
-\date{29th of July, 2021}
 
 \begin{document}
 \maketitle
@@ -78,6 +77,169 @@ The \underline{biconditional} of  \textit{p} and \textit{q}, denoted \textit{p} 
  is defined by the following truth table:
 
 [insert truth table]
+
+\subsection{Arguments}
+
+\subsubsection{Premises}
+
+Given a collection of statements '$p_1 , p_2, ... , p_n$' (called \textbf{premises}) and another statement 'q' (called the conclusion),
+an '\textit{argument}' is the assertion that the conjunction of the premisees implies the conclusion.
+
+\begin{align*}
+& p_1 \\ 
+& p_2 \\
+& ... \\
+& p_n \\
+& \therefore q
+\end{align*}
+
+\subsubsection{Arguments; validity and invalidity}
+
+\underline{Definition; valid argument}
+An argument is \textbf{valid} if whenever all of the premises are true, the conclusion is also true. 
+
+Thus, an argument is valid if ($p_1 \wedge p_2 \wedge ... \wedge p_n \rightarrow q$) is a tautology.
+
+\underline{Definition; invalid argument}
+An argument is \textbf{invalid} if it is possible to have a situation in which all of the premises are true but the conclusion is false.
+
+We can check whether an argument is valid or invalid using a truth table.
+
+\subsubsection{Rules of Inference}
+
+Modus Ponens 
+\begin{align*}
+& p \rightarrow q \\ 
+& p \\
+& \therefore q
+\end{align*}
+
+Modus Tollens
+\begin{align*}
+& p \rightarrow q \\ 
+& \sim q \\
+& \therefore \sim p
+\end{align*} \\
+
+Generalisation
+\begin{align*}
+& p \\ 
+& \therefore p \lor q \\ \\
+& q \\ 
+& \therefore p \lor q 
+\end{align*} \\
+
+Specialisation
+\begin{align*}
+& p \wedge q \\ 
+& \therefore p \\ \\
+& p \wedge q \\ 
+& \therefore q 
+\end{align*} \\
+
+Conjunction
+\begin{align*}
+& p \\ 
+& q \\
+& \therefore p \wedge q
+\end{align*} \\
+
+Elimination
+\begin{align*}
+& p \lor q \\ 
+& \sim q \\
+& \therefore p \\ \\
+& p \lor q \\ 
+& \sim p \\
+& \therefore q
+\end{align*} \\
+
+Transitivity
+\begin{align*}
+& p \rightarrow q \\ 
+& q \rightarrow r \\
+& \therefore p \rightarrow r
+\end{align*} \\
+
+Proof by Division into cases
+\begin{align*}
+& p \lor q \\ 
+& p \rightarrow q \\
+& q \rightarrow r \\
+& \therefore r
+\end{align*} \\
+
+Contradiction Rule
+\begin{align*}
+& \sim p \rightarrow (contradiction) \\
+& \therefore p
+\end{align*} \\
+
+\subsection{Quantifiers}
+
+\subsubsection{Universal and Existental quantifiers}
+
+\underline{The Universal quantifier}
+
+The symbol '$\forall$' denotes \textit{"for all"} and is called the \textbf{universal quantifier}
+
+Let Q(x) be a predicate and \textbf{D} be the domain of x. The \textbf{universal statement}
+
+$\forall$ x $\in$ \textbf{D}, Q(x)
+
+is true if and only if Q(x) is true for every x in \textbf{D}. It is false if and only if Q(x) is false for at least one x in \textbf{D} \\
+
+\underline{The Existental Quantifier}
+
+The symbol '$\exists$' denotes "there exists" and is called the \textbf{existential quantifier}
+
+Let Q(x) be a predicate and \textbf{D} be the domain of x. The \textbf{existential statement}
+
+$\exists$ x $\in$ \textbf{D} such that Q(x)
+
+is true if and only if Q(x) is true for at least one x in \textbf{D}. It is false if and only if Q(x) is false for every x in \textbf{D}
+
+\subsubsection{Negation of Quantified Statements}
+
+\underline{Universal Statement:}
+
+$\forall$ x $\in$ \textbf{D}, Q(x)
+
+The negation of this statement is logically equivalent to:
+
+$\exists$ x $\in$ \textbf{D} such that $\sim$ Q(x) \\
+
+\underline{Existential Statement:}
+
+$\exists$ x $\in$ \textbf{D} such that Q(x) 
+
+The negation of this statement is logically equivalent to:
+
+$\forall$ x $\in$ \textbf{D}, $\sim$ Q(x) \\
+
+\underline{Universal Conditional Statement}
+
+$\forall$ x $\in$ \textbf{D} if P(x) then Q(x)
+
+The negation of this statment is logically equivalent to:
+
+$\exists$ x $\in$ \textbf{D} such that $\sim$ if P(x) then Q(x) 
+
+which is;
+
+$\exists$ x $\in$ \textbf{D} such that P(x) $\wedge \sim$Q(x)
+
+\subsection{Multiple quantifiers}
+
+The predicate x $\leq$ y for real numbers \textit{x} and \textit{y} involves more than one variable.
+
+Notation such as P(x,y) is used to denote such predicates.
+
+Such predicates often appear in statments that involve more than one quantifier \\
+
+In order to establish the truth of a statment of the form
+
+$\forall$ x $\in$ \textbf{D} if P(x) then Q(x)
 
 \section{Logical Equivalences}
 
