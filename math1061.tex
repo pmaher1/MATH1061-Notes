@@ -175,6 +175,47 @@ Contradiction Rule
 & \therefore p
 \end{align*} \\
 
+\subsubsection{Alternative method for determining validity}
+
+If an argument is \textit{'invalid'} then there is a situation where all the premises are true but the conclusion is false.
+
+Attempt to see whether this is possible. To do this, look for truth values which make all premises true yet the conclusion is false.
+
+If such truth values can be found, then the argument is \textit{invalid} \\
+
+Summary of this method:
+\begin{itemize}
+\item Try to make all the premises true and the conclusion false
+\item If this can be done, then the argument is \underline{invalid}
+\item On the other hand, if this is \textbf{impossible} to do, then the argument is \underline{valid}
+\end{itemize}
+
+\underline{Checks for Validity}
+\begin{itemize}
+\item Use a truth table
+\item Use rules of inference
+\item Attempt to find turht values that make all premises true but the conclusion false.
+\end{itemize}
+
+\subsubsection{Predicates and domains}
+
+A \underline{predicate} is a sentence that contains finitely many variables, and which becomes a statement if the variables are given
+specific values. \\
+
+The \underline{domain} of each variable in a predicate is the set of all possible values that may be assigned to it. \\
+
+The \underline{truth set} of a predicate P(x) is the set of all values in the domain that, when assigned to x, make P(x) a true statement.
+
+\underline{Common Domains}
+\begin{itemize}
+\item Integers: $\mathbb{Z}$ = [ ..., -3, -2, -1, 0, 1, 2, 3, .. ]
+\item Positive integers: $\mathbb{Z}^{+}$ = [ 1, 2, 3, ... ]
+\item Non-negative integers: $\mathbb{Z}^{non-neg}$ = [ 0, 1, 2, 3, ... ]
+\item Natural numbers: $\mathbb{N}$ = [ 1, 2, 3, ... ]
+\item Rational numbers: $\mathbb{Q}$ = [ $\frac{a}{b}$ $|$ a, b $\in \mathbb{Z} \wedge$ b $\neq$ 0 ]
+\item Real numbers: $\mathbb{R}$ = entire number line
+\end{itemize}
+
 \subsection{Quantifiers}
 
 \subsubsection{Universal and Existental quantifiers}
@@ -231,15 +272,70 @@ $\exists$ x $\in$ \textbf{D} such that P(x) $\wedge \sim$Q(x)
 
 \subsection{Multiple quantifiers}
 
+\subsubsection{Intro to multiple quantifers}
+
 The predicate x $\leq$ y for real numbers \textit{x} and \textit{y} involves more than one variable.
 
 Notation such as P(x,y) is used to denote such predicates.
 
 Such predicates often appear in statments that involve more than one quantifier \\
 
-In order to establish the truth of a statment of the form
+In order to establish the truth of a statment of the form:
 
-$\forall$ x $\in$ \textbf{D} if P(x) then Q(x)
+$\forall$ x $\in$ \textbf{D}, $\exists$ y $\in$ \textbf{D} such that P(x,y)
+
+One must allow another to pick whatever element x $\in$ \textbf{D} they wish, and then must preceed with finding an element
+y $\in$ \textbf{E} which makes P(x,y) true. \\
+
+In order to establish the truth of a statment of the form:
+
+$\exists$ x $\in$ \textbf{D} such that $\forall$ y $\in$ \textbf{D}, P(x,y)
+
+One must find one particular x $\in$ \textbf{D} which makes P(x,y) true no matter which y $\in$ \textbf{D} might be chosen
+for you.
+
+\subsubsection{Negation of statements with multiple quantifers}
+
+The statement: 
+
+$\forall$ x $\in$ \textbf{D}, $\exists$ y $\in$ \textbf{E} such that P(x,y)
+
+Negates to: 
+
+$\exists$ x $\in$ \textbf{D} such that $\sim$ ($\exists$ y $\in$ \textbf{E} such that P(x,y))
+
+Which is:
+
+$\exists$ x $\in$ \textbf{D} such that $\forall$ y $\in$ \textbf{E} $\sim$ P(x,y) \\
+
+
+The statement: 
+
+$\exists$ x $\in$ \textbf{D} such that $\forall$ y $\in$ \textbf{E}, P(x,y)
+
+Negates to:
+
+$\forall$ x $\in$ \textbf{D}, $\sim$ ($\forall$ y $\in$ \textbf{E}, P(x,y))
+
+Which is:
+
+$\forall$ x $\in$ \textbf{D}, $\exists$ y $\in$ \textbf{E} such that $\sim$ P(x,y))
+
+\section{Proofs and Number Theory}
+
+\subsection{Proofs}
+
+\subsubsection{Even and Odd}
+
+An integer 'n' is \underline{even} if and only if 'n' is twice some integer.
+\begin{itemize}
+\item That is: n is even $\leftrightarrow \exists k \in \mathbb{Z}$ such that n = 2k
+\end{itemize}
+
+An integer 'n' is \underline{odd} if and only if 'n' is twice some integer.
+\begin{itemize}
+\item That is: n is odd $\leftrightarrow \exists k \in \mathbb{Z}$ such that n = 2k + 1
+\end{itemize}
 
 \section{Logical Equivalences}
 
