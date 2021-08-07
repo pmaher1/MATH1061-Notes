@@ -337,6 +337,90 @@ An integer 'n' is \underline{odd} if and only if 'n' is twice some integer.
 \item That is: n is odd $\leftrightarrow \exists k \in \mathbb{Z}$ such that n = 2k + 1
 \end{itemize}
 
+\subsubsection{Prime and Composite}
+
+An integer 'n' is \underline{prime} if and only if n $>$ 1 and for all positive integers 'r' and 's', if n = rs, then r = 1 or s = 1.
+
+An integer 'n' is \underline{composite} if and only if n $>$ 1 and n = rs for some positive integers 'r' and 's' with r $\neq$ 1 and s $\neq$ 1
+
+\underline{In symbols:}
+
+\begin{itemize}
+\item n is prime $\leftrightarrow$ n $>$ 1 $\wedge \forall$ r,s $\in \mathbb{Z}^{+}$, n = rs $\rightarrow$ ( r=1 $\wedge$ s=1 )
+\item n is composite $\leftrightarrow$ n $>$ 1 $\wedge \exists$ r, s $\in \mathbb{Z}^{+}$ such that n = rs $\wedge$ r $\neq$ 1 $\wedge$ s $\neq$ 1
+\item Note: 1 is neither prime nor composite.
+\end{itemize}
+
+\subsubsection{Direct proofs}
+
+\underline{Proving Existental Statements}
+
+To show $\exists$ x $\in$ \textbf{D} such that P(x) is true, it is enough to find one example of an element x in \textbf{D} for which P(x) is true. \\
+
+\underline{Direct Proof of Universal Statements}
+
+One way to show that $\forall$ x $\in$ \textbf{D}, P(x) is true is by a \underline{direct proof}.
+
+\begin{enumerate}
+\item Suppose x $\in$ \textbf{D}
+\item Show that P(x) is true
+\end{enumerate}
+
+Method of direct proof to show that $\forall$ x $\in$ \textbf{D} if P(x) then Q(x) is true:
+\begin{enumerate}
+\item Suppose x $\in$ \textbf{D} and P(x) is true
+\item Show that the conclusion Q(x) is true using definitions, previously established results, and the rules for logical inference.
+\end{enumerate}
+
+\underline{How to write a proof}
+
+\begin{itemize}
+\item Write the theorem to be proved
+\item Clearly mark the beginning of the proof with the word \textit{"Proof"}
+\item Use precise definitions for any mathematical terms
+\item Write the proof in complete sentences
+\item Give a reason for each assertion in your proof
+\item Make your proof self-contained
+\item Display equations and inequalities clearly
+\item Conclude by stating what it is you have proved
+\end{itemize}
+
+\subsubsection{Other forms of proof}
+
+\underline{Disproof by Counterexample}
+To show that $\forall$ x $\in$ \textbf{D} if P(x) then Q(x) is false, find a value of x $\in$ \textbf{D} for which P(x) is true and Q(x) is false. \\ \\ 
+
+\underline{Method of Proof by Contradiction}
+
+\begin{enumerate}
+\item Assume that the statement is false
+\item Show that this leads logically to a contradiction
+\begin{itemize}
+\item So it is impossible that the statement is false
+\end{itemize}
+\item Conclude that the statement is true
+\end{enumerate}
+
+\underline{Method of Proof by Contradiction to show that $\forall$ x $\in$ \textbf{D}, if P(x) then Q(x) is true:}
+
+\begin{enumerate}
+\item Assume that the statement to be proved is false. Thus, the \textit{negation} of the statement is true: $\exists$ x $\in$ \textbf{D} such that P(x) and $\sim$ Q(x)
+\item Show that this assumption leads logically to a contradiction
+\item Conclude that the statement to be proved is true.
+\end{enumerate}
+
+\underline{Method of Proof by Contraposition}
+
+\begin{enumerate}
+\item Express the statement to be proved in the form: $\forall$ x $\in$ \textbf{D}, if P(x) then Q(x)
+\item Rewrite this statement in the \underline{contrapositive} form: $\forall$ x $\in$ \textbf{D}, if $\sim$ Q(x) the $\sim$ P(x)
+\item Prove the contrapositive by direct proof:
+\begin{itemize}
+\item Suppose x $\in$ \textbf{D} and Q(x) is false
+\item Show that P(x) is false
+\end{itemize}
+\end{enumerate}
+
 \section{Logical Equivalences}
 
 Given any statement variables '\textit{p}', '\textit{q}' and '\textit{r}', a tautology '\textbf{t}' and contradiction '\textbf{c}', the following
