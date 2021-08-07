@@ -1,0 +1,80 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{Rules of Inference}
+\author{Paddy Maher}
+
+\begin{document}
+\maketitle
+
+\section{Modus Ponens}
+\begin{align*}
+& p \rightarrow q \\ 
+& p \\
+& \therefore q
+\end{align*}
+
+\section{Modus Tollens}
+\begin{align*}
+& p \rightarrow q \\ 
+& \sim q \\
+& \therefore \sim p
+\end{align*} \\
+
+\section{Generalisation}
+\begin{align*}
+& p \\ 
+& \therefore p \lor q \\ \\
+& q \\ 
+& \therefore p \lor q 
+\end{align*} \\
+
+\section{Specialisation}
+\begin{align*}
+& p \wedge q \\ 
+& \therefore p \\ \\
+& p \wedge q \\ 
+& \therefore q 
+\end{align*} \\
+
+\section{Conjunction}
+\begin{align*}
+& p \\ 
+& q \\
+& \therefore p \wedge q
+\end{align*} \\
+
+\section{Elimination}
+\begin{align*}
+& p \lor q \\ 
+& \sim q \\
+& \therefore p \\ \\
+& p \lor q \\ 
+& \sim p \\
+& \therefore q
+\end{align*} \\
+
+\section{Transitivity}
+\begin{align*}
+& p \rightarrow q \\ 
+& q \rightarrow r \\
+& \therefore p \rightarrow r
+\end{align*} \\
+
+\section{Proof by Division into cases}
+\begin{align*}
+& p \lor q \\ 
+& p \rightarrow q \\
+& q \rightarrow r \\
+& \therefore r
+\end{align*} \\
+
+\section{Contradiction Rule}
+\begin{align*}
+& \sim p \rightarrow (contradiction) \\
+& \therefore p
+\end{align*} \\
+
+\end{document}
