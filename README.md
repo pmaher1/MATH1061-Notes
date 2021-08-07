@@ -5,6 +5,8 @@ My notes for one of my university courses, MATH1061
 
 Week 1 - Almost complete ~95% (The inserts need attention)
 
-Week 2 - About 50% complete, plenty of content and lots of fixing up
+Week 2 - Same progess as week 1, could use revision and cleaning up
 
-Week 3+ - 0%
+Week 3 - Beginning of proof, very slight progress, planning on more soon ~2%
+
+Week 4+ - 0%
