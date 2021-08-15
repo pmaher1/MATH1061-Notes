@@ -1,0 +1,568 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\title{MATH1061 Course Notes}
+\author{Paddy Maher}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{Logic}
+\subsection{Logical Connectives}
+\subsubsection{Basic logical connectives}
+For a given logical statement come logical connectives. Basic logical connectives include:
+\begin{itemize}
+\item \textbf{not} = $\sim$
+\item \textbf{and} = $\wedge$
+\item \textbf{or} = $\lor$
+\item \textbf{exclusive or} = $\oplus$
+\end{itemize}
+
+\subsubsection{Logical Equivalence}
+Given two statement forms, you can show that they are logically equivalent by using a truth table or by using 
+the laws of logical equivalence. \\
+The logical equivalence between two statements is demonstrated by the symbol $\equiv$
+
+[insert truth table]
+
+\subsubsection{Conditional logical connectives}
+Logical connectives and equivalences, for given truth statements '\textit{p}' and '\textit{q}'
+\begin{itemize}
+\item \textbf{if .. then} = $\rightarrow$
+\item \textbf{if and only if} = $\leftrightarrow$
+\item \textit{p} $\rightarrow$ \textit{q} $\equiv$ 
+$\sim$ \textit{p} $\lor$ \textit{q} $\equiv$ 
+$\sim$ \textit{q} $\rightarrow$ $\sim$ \textit{p}
+\end{itemize}
+
+\subsubsection{Order of Operations}
+\begin{enumerate}
+\item $\sim$
+\item $\wedge$ and $\lor$, use parentheses to specify. If no parentheses given, work from left to right.
+\item  $\rightarrow$ and $\leftrightarrow$, use parentheses to specify. If no parentheses given, work from left to right.
+\end{enumerate}
+
+\subsection{Necessary and sufficient conditions}
+For given truth statements '\textit{p}' and '\textit{q}':
+\begin{itemize}
+\item \textit{p} is a necessary condition for \textit{q} means "if $\sim$\textit{p} then $\sim$\textit{q}" or
+equivalently "if \textit{q} then \textit{p}" or "\textit{q} only if \textit{p}".
+\item \textit{p} is a sufficient condition for \textit{q} means "if \textit{p} then \textit{q}" or equivalently
+"\textit{q} if \textit{p}"
+\end{itemize}
+
+\subsection{Definitions}
+\subsubsection{Tautology and contradictions}
+\begin{itemize}
+\item A \underline{tautology} is a statement form which always takes truth values "\textbf{true}" for all possible
+truth values of its variables.
+\item A \underline{contradiction} is a statement form which always takes truth values "\textbf{false}" for all possible
+truth values of its variables.
+\end{itemize}
+
+\subsubsection{Contrapositive}
+For given truth statements '\textit{p}' and '\textit{q}' \\
+The \underline{contrapositive} of \textit{p} $\rightarrow$ \textit{q} is $\sim$\textit{q} $\rightarrow$ $\sim$\textit{p}
+\begin{itemize}
+\item These are logically equivalent: \\
+\textit{p} $\rightarrow$ \textit{q} $\equiv$  $\sim$\textit{q} $\rightarrow$ $\sim$\textit{p}
+\end{itemize}
+
+\subsubsection{Biconditional}
+For given truth statements '\textit{p}' and '\textit{q}' \\
+The \underline{biconditional} of  \textit{p} and \textit{q}, denoted \textit{p} $\leftrightarrow$ \textit{q},
+ is defined by the following truth table:
+
+[insert truth table]
+
+\subsection{Arguments}
+
+\subsubsection{Premises}
+
+Given a collection of statements '$p_1 , p_2, ... , p_n$' (called \textbf{premises}) and another statement 'q' (called the conclusion),
+an '\textit{argument}' is the assertion that the conjunction of the premisees implies the conclusion.
+
+\begin{align*}
+& p_1 \\ 
+& p_2 \\
+& ... \\
+& p_n \\
+& \therefore q
+\end{align*}
+
+\subsubsection{Arguments; validity and invalidity}
+
+\underline{Definition; valid argument}
+An argument is \textbf{valid} if whenever all of the premises are true, the conclusion is also true. 
+
+Thus, an argument is valid if ($p_1 \wedge p_2 \wedge ... \wedge p_n \rightarrow q$) is a tautology.
+
+\underline{Definition; invalid argument}
+An argument is \textbf{invalid} if it is possible to have a situation in which all of the premises are true but the conclusion is false.
+
+We can check whether an argument is valid or invalid using a truth table.
+
+\subsubsection{Rules of Inference}
+
+Modus Ponens 
+\begin{align*}
+& p \rightarrow q \\ 
+& p \\
+& \therefore q
+\end{align*}
+
+Modus Tollens
+\begin{align*}
+& p \rightarrow q \\ 
+& \sim q \\
+& \therefore \sim p
+\end{align*} \\
+
+Generalisation
+\begin{align*}
+& p \\ 
+& \therefore p \lor q \\ \\
+& q \\ 
+& \therefore p \lor q 
+\end{align*} \\
+
+Specialisation
+\begin{align*}
+& p \wedge q \\ 
+& \therefore p \\ \\
+& p \wedge q \\ 
+& \therefore q 
+\end{align*} \\
+
+Conjunction
+\begin{align*}
+& p \\ 
+& q \\
+& \therefore p \wedge q
+\end{align*} \\
+
+Elimination
+\begin{align*}
+& p \lor q \\ 
+& \sim q \\
+& \therefore p \\ \\
+& p \lor q \\ 
+& \sim p \\
+& \therefore q
+\end{align*} \\
+
+Transitivity
+\begin{align*}
+& p \rightarrow q \\ 
+& q \rightarrow r \\
+& \therefore p \rightarrow r
+\end{align*} \\
+
+Proof by Division into cases
+\begin{align*}
+& p \lor q \\ 
+& p \rightarrow q \\
+& q \rightarrow r \\
+& \therefore r
+\end{align*} \\
+
+Contradiction Rule
+\begin{align*}
+& \sim p \rightarrow (contradiction) \\
+& \therefore p
+\end{align*} \\
+
+\subsubsection{Alternative method for determining validity}
+
+If an argument is \textit{'invalid'} then there is a situation where all the premises are true but the conclusion is false.
+
+Attempt to see whether this is possible. To do this, look for truth values which make all premises true yet the conclusion is false.
+
+If such truth values can be found, then the argument is \textit{invalid} \\
+
+Summary of this method:
+\begin{itemize}
+\item Try to make all the premises true and the conclusion false
+\item If this can be done, then the argument is \underline{invalid}
+\item On the other hand, if this is \textbf{impossible} to do, then the argument is \underline{valid}
+\end{itemize}
+
+\underline{Checks for Validity}
+\begin{itemize}
+\item Use a truth table
+\item Use rules of inference
+\item Attempt to find turht values that make all premises true but the conclusion false.
+\end{itemize}
+
+\subsubsection{Predicates and domains}
+
+A \underline{predicate} is a sentence that contains finitely many variables, and which becomes a statement if the variables are given
+specific values. \\
+
+The \underline{domain} of each variable in a predicate is the set of all possible values that may be assigned to it. \\
+
+The \underline{truth set} of a predicate P(x) is the set of all values in the domain that, when assigned to x, make P(x) a true statement.
+
+\underline{Common Domains}
+\begin{itemize}
+\item Integers: $\mathbb{Z}$ = [ ..., -3, -2, -1, 0, 1, 2, 3, .. ]
+\item Positive integers: $\mathbb{Z}^{+}$ = [ 1, 2, 3, ... ]
+\item Non-negative integers: $\mathbb{Z}^{non-neg}$ = [ 0, 1, 2, 3, ... ]
+\item Natural numbers: $\mathbb{N}$ = [ 1, 2, 3, ... ]
+\item Rational numbers: $\mathbb{Q}$ = [ $\frac{a}{b}$ $|$ a, b $\in \mathbb{Z} \wedge$ b $\neq$ 0 ]
+\item Real numbers: $\mathbb{R}$ = entire number line
+\end{itemize}
+
+\subsection{Quantifiers}
+
+\subsubsection{Universal and Existental quantifiers}
+
+\underline{The Universal quantifier}
+
+The symbol '$\forall$' denotes \textit{"for all"} and is called the \textbf{universal quantifier}
+
+Let Q(x) be a predicate and \textbf{D} be the domain of x. The \textbf{universal statement}
+
+$\forall$ x $\in$ \textbf{D}, Q(x)
+
+is true if and only if Q(x) is true for every x in \textbf{D}. It is false if and only if Q(x) is false for at least one x in \textbf{D} \\
+
+\underline{The Existental Quantifier}
+
+The symbol '$\exists$' denotes "there exists" and is called the \textbf{existential quantifier}
+
+Let Q(x) be a predicate and \textbf{D} be the domain of x. The \textbf{existential statement}
+
+$\exists$ x $\in$ \textbf{D} such that Q(x)
+
+is true if and only if Q(x) is true for at least one x in \textbf{D}. It is false if and only if Q(x) is false for every x in \textbf{D}
+
+\subsubsection{Negation of Quantified Statements}
+
+\underline{Universal Statement:}
+
+$\forall$ x $\in$ \textbf{D}, Q(x)
+
+The negation of this statement is logically equivalent to:
+
+$\exists$ x $\in$ \textbf{D} such that $\sim$ Q(x) \\
+
+\underline{Existential Statement:}
+
+$\exists$ x $\in$ \textbf{D} such that Q(x) 
+
+The negation of this statement is logically equivalent to:
+
+$\forall$ x $\in$ \textbf{D}, $\sim$ Q(x) \\
+
+\underline{Universal Conditional Statement}
+
+$\forall$ x $\in$ \textbf{D} if P(x) then Q(x)
+
+The negation of this statment is logically equivalent to:
+
+$\exists$ x $\in$ \textbf{D} such that $\sim$ if P(x) then Q(x) 
+
+which is;
+
+$\exists$ x $\in$ \textbf{D} such that P(x) $\wedge \sim$Q(x)
+
+\subsection{Multiple quantifiers}
+
+\subsubsection{Intro to multiple quantifers}
+
+The predicate x $\leq$ y for real numbers \textit{x} and \textit{y} involves more than one variable.
+
+Notation such as P(x,y) is used to denote such predicates.
+
+Such predicates often appear in statments that involve more than one quantifier \\
+
+In order to establish the truth of a statment of the form:
+
+$\forall$ x $\in$ \textbf{D}, $\exists$ y $\in$ \textbf{D} such that P(x,y)
+
+One must allow another to pick whatever element x $\in$ \textbf{D} they wish, and then must preceed with finding an element
+y $\in$ \textbf{E} which makes P(x,y) true. \\
+
+In order to establish the truth of a statment of the form:
+
+$\exists$ x $\in$ \textbf{D} such that $\forall$ y $\in$ \textbf{D}, P(x,y)
+
+One must find one particular x $\in$ \textbf{D} which makes P(x,y) true no matter which y $\in$ \textbf{D} might be chosen
+for you.
+
+\subsubsection{Negation of statements with multiple quantifers}
+
+The statement: 
+
+$\forall$ x $\in$ \textbf{D}, $\exists$ y $\in$ \textbf{E} such that P(x,y)
+
+Negates to: 
+
+$\exists$ x $\in$ \textbf{D} such that $\sim$ ($\exists$ y $\in$ \textbf{E} such that P(x,y))
+
+Which is:
+
+$\exists$ x $\in$ \textbf{D} such that $\forall$ y $\in$ \textbf{E} $\sim$ P(x,y) \\
+
+
+The statement: 
+
+$\exists$ x $\in$ \textbf{D} such that $\forall$ y $\in$ \textbf{E}, P(x,y)
+
+Negates to:
+
+$\forall$ x $\in$ \textbf{D}, $\sim$ ($\forall$ y $\in$ \textbf{E}, P(x,y))
+
+Which is:
+
+$\forall$ x $\in$ \textbf{D}, $\exists$ y $\in$ \textbf{E} such that $\sim$ P(x,y))
+
+\section{Proofs and Number Theory}
+
+\subsection{Proofs}
+
+\subsubsection{Even and Odd}
+
+An integer 'n' is \underline{even} if and only if 'n' is twice some integer.
+\begin{itemize}
+\item That is: n is even $\leftrightarrow \exists k \in \mathbb{Z}$ such that n = 2k
+\end{itemize}
+
+An integer 'n' is \underline{odd} if and only if 'n' is twice some integer.
+\begin{itemize}
+\item That is: n is odd $\leftrightarrow \exists k \in \mathbb{Z}$ such that n = 2k + 1
+\end{itemize}
+
+\subsubsection{Prime and Composite}
+
+An integer 'n' is \underline{prime} if and only if n $>$ 1 and for all positive integers 'r' and 's', if n = rs, then r = 1 or s = 1.
+
+An integer 'n' is \underline{composite} if and only if n $>$ 1 and n = rs for some positive integers 'r' and 's' with r $\neq$ 1 and s $\neq$ 1
+
+\underline{In symbols:}
+
+\begin{itemize}
+\item n is prime $\leftrightarrow$ n $>$ 1 $\wedge \forall$ r,s $\in \mathbb{Z}^{+}$, n = rs $\rightarrow$ ( r=1 $\wedge$ s=1 )
+\item n is composite $\leftrightarrow$ n $>$ 1 $\wedge \exists$ r, s $\in \mathbb{Z}^{+}$ such that n = rs $\wedge$ r $\neq$ 1 $\wedge$ s $\neq$ 1
+\item Note: 1 is neither prime nor composite.
+\end{itemize}
+
+\subsubsection{Direct proofs}
+
+\underline{Proving Existental Statements}
+
+To show $\exists$ x $\in$ \textbf{D} such that P(x) is true, it is enough to find one example of an element x in \textbf{D} for which P(x) is true. \\
+
+\underline{Direct Proof of Universal Statements}
+
+One way to show that $\forall$ x $\in$ \textbf{D}, P(x) is true is by a \underline{direct proof}.
+
+\begin{enumerate}
+\item Suppose x $\in$ \textbf{D}
+\item Show that P(x) is true
+\end{enumerate}
+
+Method of direct proof to show that $\forall$ x $\in$ \textbf{D} if P(x) then Q(x) is true:
+\begin{enumerate}
+\item Suppose x $\in$ \textbf{D} and P(x) is true
+\item Show that the conclusion Q(x) is true using definitions, previously established results, and the rules for logical inference.
+\end{enumerate}
+
+\underline{How to write a proof}
+
+\begin{itemize}
+\item Write the theorem to be proved
+\item Clearly mark the beginning of the proof with the word \textit{"Proof"}
+\item Use precise definitions for any mathematical terms
+\item Write the proof in complete sentences
+\item Give a reason for each assertion in your proof
+\item Make your proof self-contained
+\item Display equations and inequalities clearly
+\item Conclude by stating what it is you have proved
+\end{itemize}
+
+\subsubsection{Other forms of proof}
+
+\underline{Disproof by Counterexample}
+To show that $\forall$ x $\in$ \textbf{D} if P(x) then Q(x) is false, find a value of x $\in$ \textbf{D} for which P(x) is true and Q(x) is false. \\ \\ 
+
+\underline{Method of Proof by Contradiction}
+
+\begin{enumerate}
+\item Assume that the statement is false
+\item Show that this leads logically to a contradiction
+\begin{itemize}
+\item So it is impossible that the statement is false
+\end{itemize}
+\item Conclude that the statement is true
+\end{enumerate}
+
+\underline{Method of Proof by Contradiction to show that $\forall$ x $\in$ \textbf{D}, if P(x) then Q(x) is true:}
+
+\begin{enumerate}
+\item Assume that the statement to be proved is false. Thus, the \textit{negation} of the statement is true: $\exists$ x $\in$ \textbf{D} such that P(x) and $\sim$ Q(x)
+\item Show that this assumption leads logically to a contradiction
+\item Conclude that the statement to be proved is true.
+\end{enumerate}
+
+\underline{Method of Proof by Contraposition}
+
+\begin{enumerate}
+\item Express the statement to be proved in the form: $\forall$ x $\in$ \textbf{D}, if P(x) then Q(x)
+\item Rewrite this statement in the \underline{contrapositive} form: $\forall$ x $\in$ \textbf{D}, if $\sim$ Q(x) the $\sim$ P(x)
+\item Prove the contrapositive by direct proof:
+\begin{itemize}
+\item Suppose x $\in$ \textbf{D} and Q(x) is false
+\item Show that P(x) is false
+\end{itemize}
+\end{enumerate}
+
+\subsection{Types of numbers}
+
+\subsubsection{Rational numbers}
+
+A real number is \underline{rational} if and only if it can be expressed as a quotient of two integers with a non-zero denominator.
+
+The set of all rational numbers is denoted by $\mathbb{Q}$
+
+A real number that is not rational is \underline{irrational}
+
+r is rational $\leftrightarrow$ $\exists$ a, b $\in \mathbb{Z}$ such that r = $\frac{a}{b}$ and b $\neq$ 0
+
+\underline{Fact:}
+The decimal expansion of a rational number either repeats or terminates
+
+\underline{Fact:}
+The decimal expansion of an irrational number does not repeat and does not terminate
+
+\underline{Theorem:}
+For all rational numbers r and s where r $<$ s, there exists another rational number q such that r $<$ q $<$ s
+
+\subsubsection{Divisibility}
+
+If n,d $\in \mathbb{Z}$, d $\neq$ 0, then n is \underline{divisible} by d if and only if there exists some k $\in \mathbb{Z}$ such that n = kd
+
+Alternatively, we say
+\begin{itemize}
+\item n is a \underline{multiple} of d
+\item d is a \underline{factor} of n
+\item d is a \underline{divisor} of n
+\item d \underline{divides} n
+\end{itemize}
+
+The notation d$|$n is used to represent the predicate "d divides n"
+
+If n is not divisible by d, we write d$\nmid$n
+
+\underline{Theorem:}
+Every integer n$>$1 can be written as a product of primes.
+
+\underline{Proof:}
+Suppose the theorem is false. Then there exists an integer n$>$1 that is not a product of primes.
+
+Choose the smallest number \textit{n}. Either n is prime or n is composite
+
+\begin{itemize}
+\item If n is prime; then n is trivially a product of primes
+\item If n is composite: then n = rs for some positive integers r and s, where r $\neq$ 1 and s $\neq$ 1. This implies that 1 $<$ r $<$ n and 1 $<$ s $<$ n
+\end{itemize}
+
+Because we chose n to be the smallest integer greater than 1 that is not a product of primes, both r and s (which are smaller than n) \underline{must} be products of primes.
+
+Therefore, n = rs is a product of primes also.
+
+So, regardless of whether n is prime or composite, we find that n is a product of primes.
+
+This contradicts our choice of n
+
+Therefore, every integer n $>$ 1 can be written as a product of primes.
+
+\subsubsection{Prime Factorisation}
+
+Given any integer n $>$ 1, there exists
+\begin{itemize}
+\item A positive integer \textit{k}
+\item Distinct primes $p_{1}$. $p_{2}$, ..., $p_{k}$
+\item Distinct primes $e_{1}$. $e_{2}$, ..., $e_{k}$ such that \\
+n = $(p_{1})^{(e_{1})}(p_{2})^{(e_{2})}(p_{3})^{(e_{3})} ... (p_{k})^{(e_{k})}$
+\end{itemize}
+
+
+
+\section{Logical Equivalences}
+
+Given any statement variables '\textit{p}', '\textit{q}' and '\textit{r}', a tautology '\textbf{t}' and contradiction '\textbf{c}', the following
+logical equivalences hold.
+
+
+\subsection{Commutative laws}
+\begin{itemize} 
+\item \textit{p} $\wedge$ \textit{q} $\equiv$ \textit{q} $\wedge$ \textit{p}
+\item \textit{p} $\lor$ \textit{q} $\equiv$ \textit{q} $\lor$ \textit{p}
+\end{itemize}
+
+\subsection{Associative laws}
+\begin{itemize}
+\item (\textit{p} $\wedge$ \textit{q}) $\wedge$ \textit{r} $\equiv$ \textit{p} $\wedge$ (\textit{q} $\wedge$ \textit{r})
+\item (\textit{p} $\lor$ \textit{q}) $\lor$ \textit{r} $\equiv$ \textit{p} $\lor$ (\textit{q} $\lor$ \textit{r})
+\end{itemize}
+
+\subsection{Distributive laws}
+\begin{itemize}
+\item \textit{p} $\wedge$ (\textit{q} $\lor$ \textit{r}) $\equiv$ (\textit{p} $\wedge$ \textit{q}) $\lor$ (\textit{p} $\wedge$ \textit{r})
+\item \textit{p} $\lor$ (\textit{q} $\wedge$ \textit{r}) $\equiv$ (\textit{p} $\lor$ \textit{q}) $\wedge$ (\textit{p} $\lor$ \textit{r})
+\end{itemize}
+
+\subsection{Identity laws}
+\begin{itemize}
+\item \textit{p} $\wedge$ \textbf{t} $\equiv$ \textit{p}
+\item \textit{p} $\lor$ \textbf{c} $\equiv$ \textit{p}
+\end{itemize}
+
+\subsection{Negation laws}
+\begin{itemize}
+\item \textit{p} $\lor$ $\sim$\textit{p} $\equiv$ \textbf{t}
+\item \textit{p} $\wedge$ $\sim$\textit{p} $\equiv$ \textbf{c}
+\end{itemize}
+
+\subsection{Double negative laws}
+\begin{itemize}
+\item $\sim$($\sim$\textit{p}) $\equiv$ \textit{p}
+\end{itemize}
+
+\subsection{Idempotent laws}
+\begin{itemize}
+\item \textit{p} $\lor$ \textit{p} $\equiv$ \textit{p}
+\item \textit{p} $\wedge$ \textit{p} $\equiv$ \textit{p}
+\end{itemize}
+
+\subsection{Universal bound laws}
+\begin{itemize}
+\item \textit{p} $\lor$ \textbf{t} $\equiv$ \textbf{t}
+\item \textit{p} $\wedge$ \textbf{c} $\equiv$ \textbf{c}
+\end{itemize}
+
+\subsection{De Morgan's laws}
+\begin{itemize}
+\item $\sim$(\textit{p} $\wedge$ \textit{q}) $\equiv$ $\sim$\textit{p} $\lor$ $\sim$\textit{q}
+\item $\sim$(\textit{p} $\lor$ \textit{q}) $\equiv$ $\sim$\textit{p} $\wedge$ $\sim$\textit{q}
+\end{itemize}
+
+\subsection{Absorption laws}
+\begin{itemize}
+\item \textit{p} $\lor$ (\textit{p} $\wedge$ \textit{q}) $\equiv$ \textit{p}
+\item \textit{p} $\wedge$ (\textit{p} $\lor$ \textit{q}) $\equiv$ \textit{p}
+\end{itemize}
+
+\subsection{Negations of t and c}
+\begin{itemize}
+\item $\sim$\textbf{t} $\equiv$ \textbf{c}
+\item $\sim$\textbf{c} $\equiv$ \textbf{t}
+\end{itemize}
+
+
+\end{document}
