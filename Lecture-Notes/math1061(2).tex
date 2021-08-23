@@ -556,7 +556,36 @@ Thus, the greatest \underline{common} divisor is 1 \\
 \begin{align}
 a = bq + r
 \end{align}
-then gcd(a,b) = gcd(b,r)
+then gcd(a,b) = gcd(b,r) \\
+
+\underline{Why?}
+\begin{itemize}
+\item If d $|$ a and d $|$ b, then d $|$ bq so d $|$ (a - bq). Thus d $|$ r
+\item If d $|$ r and d $|$ b, then d $|$ bq so d $|$ (bq+ r). Thus d $|$ a
+\end{itemize}
+So the common divisors of a and b are \underline{the same} as the common divisors of b and r.
+
+\subsubsection{The Euclidean Algorithm}
+
+To find gcd(a,b) where a,b $\in \mathbb{Z}$ and a $\geq$ b $>$ 0:
+\begin{itemize}
+\item Write a = bq + r, as in the quotient-remainder theorem
+\item If r=0, then terminate gcd(a,b) = b
+\item Otherwiste, replace (a,b) by (b,r) and \underline{repeat}
+\end{itemize}
+
+\underline{Example:} Find gcd(192, 132)
+\begin{align}
+a = 192, b = 132, 192 = 132.1 + 60, gcd(192,132) = gcd(132,60) \\
+a = 132, b = 60, 132 = 60.2 + 12, gcd(132,60) = gcd(60,12) \\
+a = 60, b = 12, 60 = 12.5 + 0, gcd(60,12) = gcd(12,0) \\
+Therefore, gcd(192,132) = 12
+\end{align}
+
+\underline{Could this process repeat forever?}
+No. By the quotient-remainder theorem; 0 $\leq$ r $<$ b. Since we use the old value of r as the new value of b when we repeat, this means that r becomes strictly smaller on each repetition.
+
+Therefore, we must eventually reach r=0 and terminate.
 
 \section{Logical Equivalences}
 
