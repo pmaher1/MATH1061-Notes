@@ -635,7 +635,252 @@ The sequence $(\frac{n+1}{n^{2}})$ has the given initial terms.
 
 \underline{Summation Notation}
 
-We use a Greek capital letter $\Sigma$ to indicate a sum.
+We use a Greek capital letter $\Sigma$ to indicate a sum. \\
+
+If m, n $\in \mathbb{Z}$ and m $\leq$ n then
+\begin{align}
+\sum_{i=m}^{n} a_{i} = a_{m} + a_{m+1} + ... + a_{n}
+\end{align}
+
+m is the \underline{lower limit} of the summation
+n is the \underline{upper limit} of the summation \\
+
+If m=n then the sum only has one term \\
+
+\underline{Dummy Variables}
+The variable \textit{i} in $\sum_{i=m}^{n} a_{i}$ is a \textit{dummy variable}
+
+One can use any letter here \textit{(as long as it is not already taken)} \\
+
+\underline{Example:}
+
+\begin{align}
+\sum_{i=2}^{n} a_{i} = a_{2} + a_{3} + ... + a_{n} = \sum_{k=2}^{n} a_{k} = \sum_{j=2}^{n} a_{j}
+\end{align}
+
+The dummy variable is only relevant inside the su, which means you can reuse it outside the sum. \\
+
+You can also perform a \textit{change of variables} \\
+
+\underline{Example:}
+\begin{align}
+\sum_{i=2}^{6} (i-1)^{2} = 1^{2} + 2^{2} + 3^{2} + 4^{2} + 5^{2} \\
+Let k = i-1 \\
+When i = 2, k = 1 \\
+When i = 6, k = 5 \\
+\sum_{k=1}^{6} k^{2} = 1^{2} + 2^{2} + 3^{2} + 4^{2} + 5^{2} \\
+\end{align}
+
+\underline{Product Notation}
+We use a Greek capital letter $\Pi$ \textit{(pi)} to indicate a product. \\
+
+If m,n $\in \mathbb{Z}$ and m $\leq$ n then
+\begin{align}
+\prod_{i=m}^{n} a_{i} = a_{m} . a_{m+1} . ... . a_{n}
+\end{align}
+
+If m=n then the product only has one term
+
+\subsubsection{Factorials}
+
+For each positive integer n, we define n! \textit{(read n factorial)} to be
+\begin{align}
+n! = n(n-1)(n-2) ... 3.2.1 = \prod_{i=1}^{n} i
+\end{align}
+
+Also, we define 0! = 1
+
+So,
+\begin{align}
+0! = 1 \\
+1! = 1 \\
+2! = 2.1 = 2 \\
+3! = 3.2.1 = 6 \\
+4! = 4.3.2.1 = 24
+\end{align}
+
+\subsubsection{Properties of Summation and Product}
+
+If $a_{m}$, $a_{m+1}$, ... and $b_{m}$, $b_{m+1}$, ... are sequences of real numbers, and c is any real number, then for any integer n $\geq$ m, the following hold:
+\begin{enumerate}
+\item $\sum_{i=m}^{n} a_{i} \pm \sum_{i=m}^{n} b_{i} =  \sum_{i=m}^{n} (a_{i} \pm b_{i})$ \\
+\textit{(adding/subtracting over the same range)}
+
+\item $\sum_{i=m}^{n} ca_{i} = c\sum_{i=m}^{n} a_{i}$ \\
+\textit{(taking out a common factor)}
+
+\item $(\prod_{i=m}^{n} a_{i}) (\prod_{i=m}^{n} b_{i}) = \prod_{i=m}^{n} a_{i}.b_{i}$
+\end{enumerate}
+
+Suppose P(n) is a predicate and we know:
+\begin{itemize}
+\item P(1)
+\item P(1) $\rightarrow$ P(2)
+\item P(2) $\rightarrow$ P(3)
+\item P(3) $\rightarrow$ P(4)
+\end{itemize}
+
+Can we conclude that P(4) is true? Yes. By repeated use of modus ponens.
+
+\subsection{Mathematical Induction}
+
+\subsubsection{The principle of mathematical induction}
+
+Let P(n) be a predicat that is defined for every integer n $\geq$ a, where a is some fixed integer. \\
+
+Suppose
+\begin{enumerate}
+\item P(a) is true
+\item For every integer k $\geq$ a, P(k) $\rightarrow$ P(k+1)
+\end{enumerate}
+
+How to use the principle of mathematical induction: \\
+
+To prove that: For every integer n $\geq$ a, P(a).
+
+\begin{enumerate}
+\item Basis Step: Prove P(a)
+\item Inductive Step: Prove that: For every integer k $\geq$ a, P(k) $\rightarrow$ P(k+1)
+\begin{itemize}
+\item Suppose k is an integer, where k $\geq$ a, and P(k) is true. \textit{(this is called the \textbf{Inductive Hypothesis}}
+\item Using this, show that P(k+1) is true
+\end{itemize}
+\end{enumerate}
+
+\subsubsection{The principle of strong mathematical induction}
+
+Let P(n) be a predicate that is defined for every integer n $\geq$ a, where a is some fixed integer, and let b be an integer where b $\geq$ a \\
+
+Suppose
+
+\begin{enumerate}
+\item Basis Step: P(a), P(a+1), ..., P(b) are all true
+\item Inductive Step: For every integer k $\geq$ b, if P(a), P(a+1), ..., P(k) are all true, then P(k+1) is true
+\end{enumerate}
+
+Then P(n) is true for every integer n $\geq$ a \\
+
+It can be shown that this is \textbf{equivalent}  to the ordinary principle of mathematical induction \\
+
+\underline{Example:} Prove that
+For every integer n $\geq$ 8, we can form n cent postage using 3 cent and/or 5 cent stamps \\
+
+Before starting a proof, observe that:
+\begin{align}
+8 = 5 + 3 \rightarrow 11 = 5 + 3 + 3 \\
+9 = 3 + 3 + 3 \rightarrow 12 = 3 + 3 + 3 + 3 \\
+10 = 5 + 5 \rightarrow 13 = 5 + 5 + 3 \\
+\end{align}
+
+We now use this idea in a formal proof.
+
+\underline{Proof:} Let P(n) be the predicate
+"n cent postage can be formed using only 3 cent and/or 5 cent stamps" \\
+
+Basis Step: We can prove P(8), P(9) and P(10) directly, since:
+\begin{align}
+8 = 5 + 3 \\
+9 = 3 + 3 + 3 \\
+10 = 5 + 5
+\end{align}
+
+Inductive Hypothesis: Suppose that for some integer k $\geq$ 10, P(8), ..., P(k) are all true. We will use this to prove P(k+1) 
+
+Since k $\geq$ 10, we have k-2 $\geq$ 8. Thus, by the Inductive Hypothesis, we can form (k-2) cents using 3 cent and/or 5 cent stamps.
+
+Now we can add one more 3 cent stamp to make (k+1) postage and so P(k+1) is true.
+
+Therefore, by strong induction, it follows that P(n) is true for every integer n $\geq$ 8
+
+\subsubsection{The Well-Ordering principle for the integers:}
+
+If S is a non-empty set of integers all of which are greater than some fixed integer, then S has a least element \\
+
+It can be shown that the well-ordering principle is equivalent to the principle of mathematical induction, or even strong mathematical induction. All three are equivalent. \\
+
+For each of the following sets, do they have a least element?
+\begin{itemize}
+\item The set of all integers greater than 2? Yes
+\item The set of all natural numbers $\mathbb{N}$? Yes
+\item The set of all odd integers? No
+\item The set of all primes? Yes
+\item The set of positive real numbers? No
+\end{itemize}
+
+\subsubsection{Recurrence}
+
+A \underline{recurrence relation} for a sequence $a_{0},a_{1},a_{2},...$ is a formula that relates each term $a_{k}$ to some of its predecessors $a_{k-1}, ..., a_{k-i}$ where i $\in \mathbb{Z}$ and k - i $\geq$ 0 
+
+The \underline{initial conditions} for such a recurrence relation specify the values of some of the initial terms
+
+\underline{Example:} The fibonacci sequence is defined recursively by
+\begin{align}
+F_{0} = 1, F_{1} = 1 (initial conditions) and F_{n} = F_{n-1} + F_{n-2} (recurrence relation) for n \geq 2
+\end{align}
+
+\subsubsection{Forms of defining a sequence}
+
+\underline{Ways to define sequences}
+
+A sequence can be defined
+\begin{itemize}
+\item Informally, by listing the first few terms of the sequence until the pattern becomes obvious
+\begin{itemize}
+\item \underline{Ex:} 1, 1, 2, 6, 24, 120, 720, ...
+\end{itemize}
+
+\item With a general formula, by stating how a term $a_{n}$ depends on n and stating where it starts
+\begin{itemize}
+\item \underline{Ex:} $(n!)_{n\geq0}$
+\end{itemize}
+
+\item Recursively, by giving a recurrence relation relating later terms in the sequence to earlier ones and also some initial conditions
+\begin{itemize}
+\item \underline{Ex:} $a_{0}$ = 1, $a_{n}$ = n.$a_{n-1}$ For n $\geq$ 1
+\end{itemize}
+\end{itemize}
+
+\underline{Example:} Let $c_{0}$, $c_{1}$, $c_{2}$, ... be a sequence defined by
+\begin{align}
+c_{0} = 1, c_{1} = 2, c_{2} = 3 \\
+c_{n} = 3c_{n-1} - c_{n-2} - c_{n-3} for n \geq 3 
+\end{align}
+
+Write out the first 6 terms for the sequence
+\begin{align}
+c_{0} = 1 \\
+c_{1} = 2 \\
+c_{2} = 3 \\
+c_{3} = 3c_{2} - c_{1} - c_{0} = 3.3 -2 -1 = 6 \\
+c_{4} = 3c_{3} - c_{2} - c_{1} = 3.6 -3 -2 = 13 \\
+c_{5} = 3c_{4} - c_{3} - c_{2} = 3.13 -6 -3 = 30 \\
+\end{align}
+
+\underline{Example:} Show that the sequence $a_{k} = 3 - 2^{k}$, for k $\geq$ 0, 
+satisfies the recurrence relation $a_{n}$ = $2a_{n-1}$ for n $\geq$ 1 \\
+
+The sequence is $(3.2^{k})_{k\geq0}$ = 3, 6, 12, 24, 48, ...
+
+For every integer n $\geq$ 1 we have $a_{n} = 3 - 2^{n}$ and $a_{n-1} = 3 - 2^{n-1}$ 
+
+Hence 
+\begin{align}
+a_{n} = 3 - 2^{n} \\
+= 3.2.2^{n-1}
+= 2.(3.2^{n-1})
+= 2.a_{n-1}
+\end{align}
+
+Therefore, the sequence $(3.2^{k})_{k\geq0}$ satisfies the recurrence relation $a_{n}$ = $2a_{n-1}$ for n $\geq$ 1 \\
+
+We have seen that sequences of numbers can be defined recursively. Many other objects can be defined recursively as well, such as: sets, sums, products and functions ...
+
+A recursive definition for a set of objects requires three things:
+\begin{enumerate}
+\item \textbf{BASE:} A statement that a certain object belongs in a set
+\item \textbf{RECURSION:} A collection of rules showing how to form new objects for the set from existing ones in the set
+\item \textbf{RESTRICTION:} A statement that no objects belong to the set other than those arising from steps \textbf{1} and \textbf{2}
+\end{enumerate}
 
 \section{Logical Equivalences}
 
