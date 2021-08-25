@@ -11,6 +11,8 @@ Week 3 - Same as week 3
 
 Week 4 - Same as week 4
 
-Week 5 - Some notes written up for week 5, need finishing notes and then writing up on latex
+Week 5 - Same as week 5
 
-Week 6+ - No progress
+Week 6 - Some progress, all written up on the latex
+
+Week 7+ - No progress
