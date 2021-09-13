@@ -13,6 +13,8 @@ Week 4 - Same as week 4
 
 Week 5 - Same as week 5
 
-Week 6 - Some progress, all written up on the latex
+Week 6 - Some written on latex, rest is written physically
 
-Week 7+ - No progress
+Week 7 - Some written physically, no latex progress
+
+Week 8+ - No progress
