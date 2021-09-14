@@ -1000,7 +1000,140 @@ but \{2\} $\notin$ A and 5 $\notin$ A \\
 
 \subsection{Subsets}
 
-If A and B are sets, A is called a \underline{subset} of B, written A 
+If A and B are sets, A is called a \underline{subset} of B, written A $\subseteq$ B, if and only if every element of A is also an
+element of B \\
+
+A $\subseteq$ B $\leftrightarrow$ $\forall$ x, x $\in$ A $\rightarrow$ x $\in$ B \\
+
+\underline{Example:} x = \{1, 2, 3, 4\}, y = \{1, 3, 4\}, z = \{1, 2\} \\
+
+We have y $\subseteq$ x and z $\subseteq$ x but z $\nsubseteq$ y \\
+
+\underline{Note:} Every set is a subset of itself. So if S is any set, we have S $\subseteq$ S. \\
+
+For sets A and B, A is a \underline{proper subset} of B, denoted A $\subset$ B, if and only if A $\subseteq$ B and A $\neq$ B \\
+
+\underline{Venn diagrams} are a convenient way of visualising the relationships between different sets. \\
+
+Two sets are \textbf{equal} if they contain the same elements.
+\begin{align}
+A = B \leftrightarrow \forall x, x\in A \leftrightarrow x \in B \\
+\leftrightarrow A \subseteq B and B \subseteq A
+\end{align}
+
+The \underline{empty set} is the set containing no elements and is denoted by $\emptyset$\\
+$\emptyset$ = \{\} \\
+
+\underline{Note:} The empty set is a subset of every set. So if S is any set, we have $\emptyset \subseteq$ S \\
+
+For a finite set A, the \underline{cardinality} of A is the number of elements in the set A, which is denoted by $|$A$|$ \\
+
+\underline{Example:} $|$\{1, 2, 7, 13\}$|$ = 4\\
+$|\emptyset|$ = 0
+
+\subsubsection{Russel's Paradox}
+
+S = \{A$|$ A is a set and A $\notin$ A\} \\
+
+Is S $\in$ S?
+\begin{itemize}
+\item If S $\in$ S, then \textit{(by definition)} S $\notin$ S, which is a contradiction
+\item If S $\notin$ S, then \textit{(by definition)} S = S, which is a contradiction
+\end{itemize}
+
+To avoid problems such as Russel's Paradox, one can attempt to define all sets recursively: \\
+
+Base: $\emptyset$ is a set \\
+Recursion: We define several operations that build new sets from old sets 
+
+\subsubsection{Operations on sets}
+
+Let A and B be any sets
+\begin{itemize}
+\item The \underline{union} of sets A and B, denoted A $\cup$ B, is the set of all elements x such that x $\in$ A or x $\in$ B
+\textit{(or both)}. A $\cup$ B = \{x$|$ x $\in$ A or x $\in$ B\}
+
+\item The \underline{intersection} of sets A and B, denoted A $\cap$ B, is the set of all elements x usch that x $\in$ A and x $\in$ B.
+A $\cap$ B = \{x$|$ x $\in$ A and x $\in$ B\}
+
+\item The set difference of B minus A, denoted B - A, is the set of all elements x such taht x $\in$ B and x $\notin$ A. 
+B - A = \{x$|$ x $\in$ A and x $\notin$ B\}
+
+\item If the sets one is consdering are all subsets of some set U, called the \underline{universal set}, the U - A is called the
+\underline{complement} of A and is denoted A', or sometimes $\bar{A}$.
+A' = \{x$\in$ U $|$ x $\notin$ A\}
+\end{itemize}
+
+Given sets $A_{0}$, $A_{1}$, $A_{2}$, ... and an integer n $\geq$ 0,
+
+\begin{align}
+\cup_{i=0}^{n} A_{i} = \{x | x \in A_{i} for at least one i = 0, 1, ..., n\} \\
+\cup_{i=0}^{\infty} A_{i} = \{x | x \in A_{i} for at least one integer i \geq 0\} \\
+\cap_{i=0}^{n} A_{i} = \{x | x \in A_{i} for all  i = 0, 1, ..., n\} \\
+\cap_{i=0}^{\infty} A_{i} = \{x | x \in A_{i} for every integer i \geq 0\} \\
+\end{align}
+
+\underline{Definition:} For any set S, the \underline{power set} of S, denoted by P(S), is the set of all subsets of S
+\begin{align}
+P(S) = \{x | x \leq S\}
+\end{align}
+
+\underline{Example:} S = \{1,3\} \\
+P(S) = \{$\emptyset$, \{1\}, \{3\}, \{1,3\}\} \\
+
+\underline{Note:} For any set S, $\emptyset$ $\in$ P(S) and S $\in$ P(S) \\
+
+\underline{Fact:} If $|$S$|$ = n, then the $|$P(S)$|$ = $2^{n}$ \\
+
+\underline{Definition:} Two sets A and B are \underline{disjoint} if and only if A $\cap$ B = $\emptyset$ \\
+
+\underline{Definition:} Sets $A_{1}$,  $A_{2}$,  $A_{3}$, ... are \underline{mutually disjoint} (or \underline{pairwise disjoint} or 
+\underline{nonoverlapping}) if and only if $A_{i}$ $\cap$ $A_{j}$ = $\emptyset$ whenever i $\neq$ j \\
+
+\underline{Definition:} A finite or infinite collection of nonempty sets \{$A_{1}$, $A_{2}$, $A_{3}$, ...\} is a \underline{partition}
+of a set A if and only if A is the union of all $A_{i}$ and $A_{1}$, $A_{2}$, $A_{3}$, .. are mutually disjoint. \\
+
+\underline{Example:} A partition of S = \{2, 3, 5, 7, 17\} is given by \{\{2\}, \{3,5\}, \{7,17\}\} \\
+
+\underline{Example:} Consider $\mathbb{Z}$ and division by 3. Thus, by the quotient remainder theorem every integer n can be written uniquely as n = 3q + r, where 0 $<$ r $<$ 3
+
+\begin{align}
+A_{0} = \{n \in \mathbb{Z} | n \equiv 0 (mod 3)\} \\ 
+A_{1} = \{n \in \mathbb{Z} | n \equiv 1 (mod 3)\} \\ 
+A_{2} = \{n \in \mathbb{Z} | n \equiv 2 (mod 3)\} \\ 
+\end{align}
+
+\{$A_{0}$, $A_{1}$, $A_{2}$\} is a partition of $\mathbb{Z}$ \\
+
+\underline{Definition:} Let n $\in \mathbb{Z}^{+}$ and let $x_{1}$, $x_{2}$, ..., $x_{n}$, be n not necessarily distinct elements.
+The \underline{ordered n-tuple}, denoted ($x_{1}$, $x_{2}$, ..., $x_{n}$), consists of the n elements with their ordering: \\
+
+First $x_{1}$, then $x_{2}$, and so on up to $x_{n}$. \\
+
+When n = 2, we call ($x_{1}$, $x_{2}$) an \underline{ordered pair} \\
+
+When n = 3, we call ($x_{1}$, $x_{2}$, $x_{3}$) an \underline{ordered triple} \\
+
+($x_{1}$, $x_{2}$, ..., $x_{n}$) = ($y_{1}$, $y_{2}$, ..., $y_{n}$) $\rightarrow$ $x_{i}$ = $y_{i}$ for all i with 1 $\geq$ i $\geq$ 
+n \\
+
+\underline{Example:} (1, 2, 3) $\neq$ (1, 2, 4) \\
+(1,3) $\neq$ (3,1) \\
+
+\underline{Definition:} The \underline{Cartesian product} of sets A and B, denoted AxB is:
+\begin{itemize}
+\item AxB = \{(a,b) $|$ a $\in$ A, b $\in$ B \}
+\end{itemize}
+
+\underline{Example:} If A = \{a,b\} and B = \{2,3\} then
+\begin{itemize}
+\item AxB = \{(a,2), (a,3), (b,2), (b,3)\}
+\end{itemize}
+
+\underline{Example:} The familar x-y plane is
+\begin{itemize}
+\item $\mathbb{R}$x$\mathbb{R}$ = \{(x,y)$|$ x,y $\in \mathbb{R}$\}
+\end{itemize}
 
 \section{Logical Equivalences}
 
