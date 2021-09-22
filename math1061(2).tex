@@ -1135,6 +1135,78 @@ n \\
 \item $\mathbb{R}$x$\mathbb{R}$ = \{(x,y)$|$ x,y $\in \mathbb{R}$\}
 \end{itemize}
 
+In general,
+$A_{1}$ x $A_{2}$ x  ... $A_{n}$ = \{($a_{1}$,$a_{2}$, ...,$a_{n}$ $|$ $a_{i} \in A_{i},$ 1 $\geq$ i $\geq$ n \} \\
+
+\subsection{Intervals:}
+
+Given a,b $\in \mathbb{R}$ with a $\geq$ b, \\
+
+\begin{itemize}
+\item (a,b) = \{ x $\in \mathbb{R} |$ a $<$ x $<$ b \}     open interval
+\item .[a,b] = \{ x $\in \mathbb{R} |$ a $\leq$ x $\leq$ b \}     closed interval
+\item (a,b] = \{ x $\in \mathbb{R} |$ a $<$ x $\leq$ b \}
+\item .[a,b) = \{ x $\in \mathbb{R} |$ a $<$ x $\leq$ b \}
+\end{itemize}
+
+The symbols $\infty$ and -$\infty$ are used to indicate intervals that are unbounded either on the left or on the right.
+
+\begin{itemize}
+\item (a,$\infty$) = \{ x $\in \mathbb{R} |$ x $>$ a \}
+\item .[a,$\infty$) = \{ x $\in \mathbb{R} |$ x $\geq$ a \}
+\item ($\infty$,b) = \{ x $\in \mathbb{R} |$ x $<$ b \}
+\item (-$\infty$,b] = \{ x $\in \mathbb{R} |$ x $\leq$ b \}
+\end{itemize}
+
+\underline{Method to prove A $\subseteq$ B}
+
+\begin{enumerate}
+\item Suppose x $\in$ A
+\item Show that x $\in$ B
+\end{enumerate}
+
+\underline{Example:}\\
+Let A = \{ n $\in \mathbb{Z}$, n = 4k + 2 for some k $\in \mathbb{Z}$ \} and  E = \{ n $\in \mathbb{Z}$, n = 2m for some m $\in \mathbb{Z}$ \} \\
+
+Prove that A $\subseteq$ E. \\
+
+\underline{Proof:} \\
+Suppose n $\in$ A. THen n = 4k + 2 for some k $\in \mathbb{Z}$ \\
+
+Hence n = 2( 2k+1), and 2k + 1 $\in \mathbb{Z}$ \\
+
+Thus n is one of the form 2m for some m $\in \mathbb{Z}$, so n $\in$ E, therefore A $\subseteq$ E \\
+
+Note: 4 $\in$ E but 4 $\notin$ A, so A $\subset$ E \\
+
+\underline{Theorem:} \\
+
+For all sets A, B and C, if A $\subseteq$ B and B $\subseteq$ C, then A $\subseteq$ C
+\textit{(Transitive Property of Subsets)} \\
+
+\underline{Proof:}
+
+Suppose A, B and C, are sets and A $\subseteq$ B and B $\subseteq$ C.\\
+
+Suppose x $\in$ A. Then, since A $\subseteq$ B, we have x $\in$ B. Hence, since B $\subseteq$ C, we have x $\in$ C. \\
+
+Therefore, A $\subseteq$ C \\
+
+\underline{Theorem:}
+
+For all sets A and B, \\
+
+A $\cap$ B $\subseteq$ A and A $\cap$ B $\subseteq$ B \textit{(Inclusion of Intersection)} \\
+
+A $\subseteq$ A $\cup$ B and B $\subseteq$ A $\cup$ B \textit{(Inclusion in Union)} \\
+
+\underline{Method to Prove A = B}
+
+\begin{enumerate}
+\item Prove A $\subseteq$ B \textit{(Suppose x $\in$ A and then show x $\in$ B)}
+\item Prove B $\subseteq$ A \textit{(Suppose x $\in$ B and then show x $\in$ A)}
+\end{enumerate}
+
 \section{Logical Equivalences}
 
 Given any statement variables '\textit{p}', '\textit{q}' and '\textit{r}', a tautology '\textbf{t}' and contradiction '\textbf{c}', the following
