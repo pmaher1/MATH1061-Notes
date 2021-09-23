@@ -1207,6 +1207,303 @@ A $\subseteq$ A $\cup$ B and B $\subseteq$ A $\cup$ B \textit{(Inclusion in Unio
 \item Prove B $\subseteq$ A \textit{(Suppose x $\in$ B and then show x $\in$ A)}
 \end{enumerate}
 
+\underline{Example:}\\
+
+Let A = \{ x $\in \mathbb{Z} |$ x $\equiv$ 1 (mod 6) \} and B = \{ x $\in \mathbb{Z} |$ x $\equiv$ 1 (mod 2) and x $\equiv$ (mod 3) \} \\
+
+Prove that A = B \\
+
+\underline{Proof:} 
+\begin{itemize}
+\item \underline{First, prove that A $\subseteq$ B:} \\
+Let x $\in$ A. Then x $\in \mathbb{Z}$ and x = 6k + 1 for some k $\in \mathbb{Z}$ \\
+
+Hence x = 2(3k) + 1 so x $\equiv$ 1 \textit{(mod 2)} \\
+
+Also x = 3(2k) + 1 so x $\equiv$ 1 \textit{(mod 3)} \\
+
+Thus x $\in$ B, $\therefore$ A $\subseteq$ B
+
+\item \underline{Next, prove that B $\subseteq$ A:} \\
+Let x $\in$ B. Then x $\in \mathbb{Z}$ and x = 2k + 1 for some k $\in \mathbb{Z}$ and x = 3l + 1 for some l $\in \mathbb{Z}$. Either
+l is even or l is odd. If l is odd, then x = 3l + 1 is even, which \underline{contradicts} the fact that x = 2k + 1. Hence l is even.
+
+Now l = 2m for some m $\in \mathbb{Z}$ and so x = 3(2m) + 1 = 6m + 1. Thus x $\in$ A. $\therefore$ B $\subseteq$ A.
+
+\item $\therefore$ A = B
+\end{itemize}
+
+Let A and B be any subsets of the universal set U. Prove that (A$\cap$B)' = A' $\cup$ B'. \\
+
+\underline{Proof:} \\
+
+Let x $\in$ U.
+\begin{align}
+x \in (A \cap B)' \leftrightarrow x \notin A \cap B \\
+\leftrightarrow \sim (x \in A \cap B) \\
+\leftrightarrow \sim (x \in A \wedge x \in B) \\
+\leftrightarrow \sim (x \in A) \lor \sim (x \in B) \\
+\leftrightarrow x \in A' \wedge x \in B' \\
+\leftrightarrow x \in A' \cup B' 
+\end{align}
+
+$\therefore$ (A $\cap$ B)' = A' $\cup$ B' \\
+
+\subsection{Set Identities}
+Let A, B and C be any sets \\
+
+\underline{Commutative Laws} \\
+A $\cup$ B = B $\cup$ A \\
+A $\cap$ B = B $\cap$ A \\
+
+\underline{Associative Laws} \\
+(A $\cup$ B) $\cup$ C = A $\cup$ (B $\cup$ C) \\
+(A $\cap$ B) $\cap$ C = A $\cap$ (B $\cap$ C) \\
+
+\underline{Distributive Laws} \\ 
+A $\cup$ (B $\cap$ C) = (A $\cup$ B) $\cap$ (A $\cup$ C) \\
+A $\cap$ (B $\cup$ C) = (A $\cap$ B) $\cup$ (A $\cap$ C) \\
+
+\underline{Absorption Laws} \\
+A $\cup$ (A $\cap$ B) = A \\
+A $\cap$ (A $\cup$ B) = A \\
+
+\underline{Idempotent Laws} \\
+A $\cup$ A = A \\
+A $\cap$ A = A \\
+
+\subsubsection{More Set Identities}
+
+Let A and B be subsets of a universal set U. \\
+
+\underline{De Morgan's Laws} \\
+(A $\cup$ B)' - A' $\cap$ B' \\
+(A $\cap$ B)' - A' $\cup$ B' \\
+
+\underline{Set Difference Law} \\
+A - B = A $\cap$ B' \\
+
+\underline{Double Complement Law} \\
+(A')' = A\\
+
+\underline{Complements of U and $\phi$} \\
+U' = $\phi$ \\
+$\phi$' = U \\
+
+\underline{Complement Laws} \\
+A $\cup$ A' = U \\
+A $\cap$ A' = $\phi$ \\
+
+\underline{Identity Laws}\\
+A $\cup$ $\phi$ = A \\
+A $\cap$ U = A \\
+
+\underline{Universal Bound Laws}\\
+A $\cup$ U = U \\
+A $\cap$ $\phi$ = $\phi$ \\
+
+\subsubsection{Lemma for sets}
+
+\underline{Lemma} \\
+For any sets A, B and C that are subsets of a universal set U,
+\begin{align}
+(A \cup B)- C = (A - C) \cup (B - C)
+\end{align}
+
+\underline{Proof:} \\
+Let A, B and C be any subsets of U. Then,
+\begin{align}
+(A \cup B) - C = (A \cup B) \cap C' \\
+= C' \cap (A \cup B) \\
+= (C' \cap A) \cup (C' \cap B) \\
+= (A \cap C') \cup (B \cap C') \\
+= (A - C) \cup (B - C)
+\end{align}
+
+\subsection{Functions}
+
+\underline{Definition:} \\
+A function f from a set X to a set Y, denoted f : X $\longrightarrow$ Y is a subset of the Cartesian product X x Y such that for every element x $\in$ X, there exists a unique element y $\in$ Y for which (x,y) $\in$ f. \\
+
+We call X the \textbf{domain} of f and Y the \textbf{co-domain} of f. \\
+
+If f: X $\longrightarrow$ Y is a function and (x,y) $\in$ f 
+\begin{itemize}
+\item write f(x) = y
+\item write f: x $\longmapsto$ y 
+\item call f(x) the value of f at x 
+\item call f(x) the image of x under f 
+\end{itemize}
+
+\underline{Note:} \\
+f denotes a function, f(x) denotes an element of Y \\
+
+\underline{Note:} \\
+Distinct elements of the domain may share the same image \\
+
+\underline{Image and Range} \\
+Given a function f: X $\longrightarrow$ Y and an element x $\in$ X, we call f(x) the \textbf{image} of x. If A $\subseteq$ X, then the \textbf{image} of A is f(A) = \{ f(x) $|$ x $\in$ A \} \\
+= \{ y $|$ f(x) = y for some x $\in$ A \} \\
+
+Note that f(A) $\subseteq$ Y. \\
+
+The set f(x) is called the \textbf{range} of f. f(X) = \{ y $\in$ Y $|$ y = f(x) for some x $\in$ X \} \\
+
+[insert image of domain and co-domain, and range] \\
+
+\underline{Inverse Image:}\\
+Given a function f: X $\longrightarrow$ Y, if B $\subseteq$ Y, the \textbf{inverse image} or \textbf{preimage} of B is
+
+\begin{align}
+f^{-1}(B) = \{ x \in X | f(x) \in B \}
+\end{align}
+
+Observation: Suppose f and g are functions from X to Y. Then f and g are equal, written f = g, if and only if
+\begin{itemize}
+\item f(x) = g(x), $\forall$ x $\in$ X
+\end{itemize} 
+
+\underline{Example:}\\
+Define f: $\mathbb{Z} \longrightarrow \mathbb{Z}$ by f(x) = x \\
+and g: $\mathbb{Z} \longrightarrow \mathbb{Z}$ by g(x) = $\sqrt{x^{2}}$ \\
+
+Hence f $\neq$ g since f(-1) = -1 but g(-1) = $\sqrt{(-1)^{2}}$ = 1  \\
+
+Note that the range of f is $\mathbb{Z}$ and the range of g is $\mathbb{Z}^{\geq 0}$ \\
+
+\underline{The Identity Function} \\
+Given a set X, the function $\iota_{X}$: X $\longrightarrow$ X defined by
+\begin{itemize}
+\item $\iota_{X}$(x) = x for every x $\in$ X 
+\end{itemize}
+is called the \textbf{identity function} on X \\
+
+Here $\iota$ is the Greek letter \textbf{iota} \\
+
+\underline{Sequences:} \\
+An infinite sequence is a function defined on the set of integers greater than or equal to some fixed integer. \\
+
+\underline{Example:} \\
+A sequence \{ $a_{n}$ $\}_{k \geq 1}$, is a function f with domain $\mathbb{Z}^{+}$
+\begin{itemize}
+\item f(n) = an for every n $\in \mathbb{Z}^{+}$
+\end{itemize}
+
+\underline{One-to-one functions}\\
+Let f be a function from a set X to a set Y. The function f is \underline{one-to-one} (or \textbf{injective}) if and only if for all elements $x_{1}$ and $x_{2}$ in X, if f($x_{1}$) = f($x_{2}$), then $x_{1}$ = $x_{2}$ \\
+
+Or, equivalently, for all elements $x_{1}$ and $x_{2}$ in X,
+\begin{itemize}
+\item if $x_{1}$ $\neq$ $x_{2}$, then f($x_{1}$) $\neq$ f($x_{2}$)
+\end{itemize}
+
+A function f: X $\longrightarrow$ Y is not \underline{not one-to-one} if and only if there exists some $x_{1}$ and $x_{2}$ in X such that  f($x_{1}$) = f($x_{2}$) and $x_{1}$ $\neq$ $x_{2}$
+
+\subsubsection{Proving one-to-one}
+
+To prove a function f: X $\longrightarrow$ Y is one-to-one, usually use the direct method of proof:
+\begin{itemize}
+\item Suppose $x_{1}$ and $x_{2}$ are elements of X and f($x_{1}$) = f($x_{2}$)
+\item Show that $x_{1}$ = $x_{2}$
+\item To prove that a function f: X $\longrightarrow$ Y is not one-to-one, usually find elements $x_{1}$ and $x_{2}$ in X such that f($x_{1}$) = f($x_{2}$) but $x_{1}$ $\neq$ $x_{2}$
+\end{itemize}
+
+\underline{Example:}
+Let f: $\mathbb{R} \longrightarrow \mathbb{R}$ be defined by f(x) = $x^{2}$. Is f one-to-one (injective)? \\
+
+Proof that f is \textbf{not} one-to-one: \\
+Take $x_{1}$ = 2 and $x_{2}$ = -2. Since f(2) = 4 and f(-2) = 4, \textbf{different} elements with the same image. Thus, f is not one-to-one. \\
+
+\underline{Example:}
+Let f: $\mathbb{R} \longrightarrow \mathbb{R}$ be defined by f(x) = $\frac{x}{2}$. Is f one-to-one? \\
+
+Proof that f is one-to-one: \\
+Suppose $x_{1}$,$x_{2}$ $\in \mathbb{R}$ and f($x_{1}$) = f($x_{2}$). Hence $\frac{x_{1}}{2}$ = $\frac{x_{2}}{2}$, so multiplying both sides by 2 we have $x_{1}$ = $x_{2}$ \\
+
+Thus, $\forall x_{1}$, $x_{2} \in \mathbb{R}$, f($x_{1}$) = f($x_{2}$) $\rightarrow x_{1}$ = $x_{2}$. $\therefore$ f is one-to-one
+
+\subsection{Onto functions}
+
+Let f be a function from a set X to a set Y. The function f is \textbf{onto} (or \textbf{surjective}) if and monly if given any element y $\in$ Y, it is possible to find an element x $\in$ X with the property that y = f(x) \\
+
+Equivalently, f : X $\longrightarrow$ Y is \underline{onto} if and only if
+\begin{itemize}
+\item $\forall$ y $\in$ Y, $\exists$ x $\in$ X such that f(x) = y
+\end{itemize}
+
+A function f: X $\longrightarrow$ Y is \underline{not onto} if and only if there exists some y $\in$ Y such that for all x $\in$ X, f(x) $\neq$ y \\
+
+
+\subsubsection{Proving if a function is onto}
+
+\begin{itemize}
+
+\item To prove a function f: X $\longrightarrow$ Y is onto:
+\begin{itemize}
+\item Suppose that y $\in$ Y
+\item Consturct an element x of X with f(x) = y
+\end{itemize}
+
+\item To prove that a function f: X $\longrightarrow$ Y is not onto:
+\begin{itemize}
+\item Find an element y $\in$ Y such that y $\neq$ f(x) for any x $\in$ X
+\end{itemize}
+
+\end{itemize}
+
+\underline{Example:} \\
+Let f: $\mathbb{R} \longrightarrow \mathbb{R}$ be defined by f(x) = 2x - 3. Is f onto? \\
+
+Proof that f is \underline{onto}: \\
+Suppose y $\in \mathbb{R}$. Take x = $\frac{y+3}{2} \in \mathbb{R}$. Then f(x) = f($\frac{y+3}{2}$) = 2($\frac{y+3}{2}$)-3 = y+3-3 = y \\
+
+Hence $\forall$ y $\in \mathbb{R}$, $\exists$ x $\in \mathbb{R}$ such that f(x) = y. Thus, f is onto. \\
+
+\underline{Example:} \\
+Let g: $\mathbb{Z} \longrightarrow \mathbb{Z}$ be denoted by g(x) = $x^{2}$. Is g onto? \\
+
+Proof that g is \underline{not onto}: \\
+Take y = -1 $\in \mathbb{Z}$. Since $x^{2}$ $\geq$ 0 for every x $\in\mathbb{Z}$, there does not exist an element in the domain with image -1. Hence, g is not onto.
+
+\subsection{Bijections}
+
+A function f is a \underline{one-to-one correspondence} or a \textbf{bijection} (or \textbf{bijective}) if and only if f is both one-to-one and onto. \\
+
+\underline{Theorem:} \\
+
+Suppose that the function f: X $\longrightarrow$ Y is a bijection. Then there exists a function $f^{-1}$: Y $\longrightarrow$ X that is defined as follows: \\
+
+Given any element y $\in$ Y,
+\begin{itemize}
+\item $f^{-1}$(y) = the unique element x $\in$ X such that f(x) = y
+\end{itemize}
+
+In other words,
+\begin{itemize}
+\item $f^{-1}$(y) = x if and only if y = f(x)
+\end{itemize}
+
+The function $f^{-1}$ is called the \textbf{inverse function} of f. \\
+
+\underline{Example:} \\
+Let f: $\mathbb{R} \longrightarrow \mathbb{R}$ be defined by f(x) = 2x + 1\\
+f is a bijection \\
+\begin{align}
+f(x) = y \leftrightarrow 2x + 1 = y \\
+\leftrightarrow x = \frac{y-1}{2}
+\end{align}
+
+Therefore, the function
+\begin{itemize}
+\item $f^{-1}$(y) = $\frac{y-1}{2}$ is the inverse function of f
+\end{itemize}
+
+\subsubsection{Composition of functions}
+
+Let f: X $\longrightarrow$ Y and g: Y $\longrightarrow$ Z be functions. \\
+
+The \underline{composition} of f and g is the function
+
 \section{Logical Equivalences}
 
 Given any statement variables '\textit{p}', '\textit{q}' and '\textit{r}', a tautology '\textbf{t}' and contradiction '\textbf{c}', the following
