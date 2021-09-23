@@ -1504,6 +1504,221 @@ Let f: X $\longrightarrow$ Y and g: Y $\longrightarrow$ Z be functions. \\
 
 The \underline{composition} of f and g is the function
 
+\begin{itemize}
+\item g $\circ$ f: X $\longrightarrow$ Z defined by
+\begin{itemize}
+\item (g $\circ$ f)(x) = g(f(x)) $\forall$ x $\in$ X
+\end{itemize}
+\end{itemize}
+
+[insert picture of g$\circ$f] \\
+
+The domain of g $\circ$ f is X and the co-domain of g $\circ$ f is Z. \\
+
+The range of g $\circ$ f is the image (under g) of the range of f. \\
+
+\underline{Example:} \\
+Let f: $\mathbb{R} \longrightarrow \mathbb{R}$ and g: $\mathbb{R} \longrightarrow \mathbb{R}$ be defined by 
+\begin{itemize}
+\item f(x) = $x^{2}$ for all x $\in \mathbb{R}$
+\item g(x) = $x^{3}$ - 2x for all x $\in \mathbb{R}$
+\end{itemize}
+
+Find (g $\circ$ f)(x) and (f $\circ$ g)(x)
+\begin{align}
+(g \circ f)(x) = g(f(x))
+= g(x^{2})
+= (x^{2})^{3} - 2(x^{2})
+= x^{6} - 2x^{2}
+\end{align}
+
+\begin{align}
+(f \circ g)(x) = f(g(x))
+= f(x^{3} - 2x)
+= (x^{3} - 2x)^{2}
+= x^{6} - 4x^{4}+ 4x^{2}
+\end{align}
+
+Warning: Note that g $\circ$ f and f $\circ$ g mean different things \\
+
+\underline{Theorem:} \\
+If f: X $\longrightarrow$ Y is a function and $\iota_{x}$ is the identity function on X and $\iota_{y}$ is the identity function on Y, then
+\begin{itemize}
+\item f $\circ$ $\iota_{x}$ = f and $\iota_{y}$ $\circ$ f = f
+\end{itemize}
+
+\underline{Proof:} \\
+Suppose f: X $\longrightarrow$ Y is a function and $\iota_{x}$ and $\iota_{y}$ are the identity functions on X and y respectively. Then, by definition
+\begin{itemize}
+\item $\iota_{x}$(x) = x $\forall$ x $\in$ X
+\item $\iota_{y}$(y) = y $\forall$ y $\in$ Y
+\end{itemize}
+
+Now for all x $\in$ X (f $\circ$ $\iota_{x}$)(x) = f($\iota_{x}$(x)) = f(x) \\
+Hence f $\circ$ $\iota_{x}$ = f. \\
+
+\underline{Theorem:}
+
+Let f: X $\longrightarrow$ Y be a bijection with inverse function $f^{-1}$: Y $\longrightarrow$ X. Then 
+\begin{itemize}
+\item $f^{-1} \circ$ f = $\iota_{x}$ and f $\circ$ $f^{-1}$ = $\iota_{y}$
+\item $\forall$ x $\in$ X, y $\in$ Y
+\item $f^{-1}$(y) = x $\leftrightarrow$ f(x) = y
+\end{itemize} 
+
+\underline{Example:} \\
+
+The function f: $\mathbb{R} \longrightarrow \mathbb{R}$ defined by f(x) = 2x + 1 for all x $\in \mathbb{R}$ is a bijective function with inverse function $f^{-1}$(y) = $\frac{y-1}{2}$ for all y $\in \mathbb{R}$ \\
+
+Thus, for all x $\in \mathbb{R}$, \\
+
+\begin{align}
+(f^{-1} \circ f)(x) \\
+= f^{-1}(f(x)) \\
+= f^{-1}(2x + 1)\\
+= \frac{(2x+1)-1}{2} \\
+= x \\
+\therefore f^{-1} \circ f = \iota_{\mathbb{R}}
+\end{align}
+
+Also, for all y $\in \mathbb{R}$, 
+
+\begin{align}
+(f^{-1} \circ f)(y) \\
+= f^{-1}(f(y)) \\
+= f\frac{y - 1}{2}\\
+= 2\frac{y-1}{2} + 1 \\
+= y \\
+\therefore f^{-1} \circ f = \iota_{\mathbb{R}}
+\end{align}
+
+\subsubsection{Injective and surjective composite functions}
+
+\underline{Theorem:} \\
+
+If f: X $\longrightarrow$ Y and g: Y $\longrightarrow$ Z are both one-to-one, then g $\circ$ f is one-to-one. \\
+
+\underline{Proof:} \\
+
+Suppose f: X $\longrightarrow$ Y and g: Y $\longrightarrow$ Z are both one-to-one functions. \\
+Suppose $x_{1}$, $x_{2}$ $\in$ X and
+\begin{itemize}
+\item (g $\circ$ f)($x_{1}$) = (g $\circ$ f)($x_{2}$)
+\end{itemize}
+
+Then, 
+\begin{itemize}
+\item g(f($x_{1}$)) = g(f($x_{2}$))
+\end{itemize}
+
+Since g is one-to-one, we have f($x_{1}$) = f($x_{2}$) \\
+
+Now, since f is one-to-one, we have $x_{1}$ = $x_{2}$ \\
+
+Therefore, g $\circ$ f is one-to-one \\
+
+\underline{Theorem:} \\
+
+If f: X $\longrightarrow$ Y and g: Y $\longrightarrow$ Z are both onto functions, then g $\circ$ f is onto. \\
+
+\underline{Proof:} \\
+
+Suppose f: X $\longrightarrow$ Y and g: Y $\longrightarrow$ Z are both onto functions \\
+
+Suppose z $\in$ Z \\
+
+Since g is onto, $\exists$ y $\in$ Y such that g(y) = z \\
+
+Since f is onto, $\exists$ x $\in$ X such that f(x) = y \\
+
+Hence $\exists$ x $\in$ X such that 
+\begin{align}
+(g \circ f)(x) = g(f(x)) \\
+= g(y) \\
+= 3
+\end{align}
+
+Therefore, g $\circ$ f is onto. \\
+
+\subsubsection{Cardinality}
+
+The \textbf{cardinality} of a set is a measure of how large it is \\
+
+One says that two sets X and Y have the \textit{same cardinality} if and only if there is a bijection between them. \\
+We write this as $|$X$|$ = $|$Y$|$ \\
+
+\underline{Fact:}
+
+If $|$X$|$ = $|$Y$|$ and $|$Y$|$ = $|$Z$|$, then $|$X$|$ = $|$Z$|$ \\
+
+\subsection{Infinite and Finite sets}
+
+A \underline{finite} set is either one which has no elements at all, or one for which there exists a bijection with a set of the form \{ 1, 2, ..., n \} for some fixed positive integer n. \\
+
+An \underline{infinite} set is a nonempty set for which there does \textbf{not} exist any bijection with a set of the form \{ 1, 2, ..., n \} for any positive integer n. \\
+
+\subsubsection{Finite Sets}
+
+\underline{Theorem:} \\
+
+Suppose X and Y are finite sets.
+
+\begin{enumerate}
+\item If $|$X$|$ > $|$Y$|$, then there is no injective function f: X $\longrightarrow$ Y 
+\item If $|$X$|$ < $|$Y$|$, then there is no surjective function f: X $\longrightarrow$ Y
+\item There is a bijective function f: X $\longrightarrow$ Y if and only if $|$X$|$ = $|$Y$|$
+\end{enumerate}
+
+\underline{Corollary:} \\
+
+For finite sets X and Y with $|$X$|$ = $|$Y$|$, the following statements are equivalent:
+\begin{itemize}
+\item f: X $\longrightarrow$ Y is injective 
+\item f: X $\longrightarrow$ Y is surjective 
+\item f: X $\longrightarrow$ Y is bijective 
+\end{itemize}
+
+Note these results do \textbf{NOT} apply to infinite sets. \\
+
+For example, if X = $\mathbb{Z}$ and Y = $\mathbb{Z}$ then f: X $\longrightarrow$ Y given by f(x) = 2x, $\forall$ x $\in$ X is one-to-one but not onto, even though $|$X$|$ = $|$Y$|$
+
+\subsubsection{Infinite Sets}
+
+Let 2$\mathbb{Z}$ = \{ n $|$ n = 2k for some k $\in \mathbb{Z}$ \}. Prove that $|\mathbb{Z}|$ = $|2\mathbb{Z}|$  \\
+
+\underline{Proof:} \\
+
+Define a function f: $\mathbb{Z} \longrightarrow 2\mathbb{Z}$ as follows:
+\begin{itemize}
+\item f(k) = 2k for every k $\in \mathbb{Z}$
+\end{itemize}
+
+\underline{To show f is injective:} \\
+Suppose $k_{1}$, $k_{2}$ $\in \mathbb{Z}$ and f($k_{1}$) = f($k_{2}$). Then 2$k_{1}$ = 2$k_{2}$, so, by dividing both sides by 2, we have
+\begin{itemize}
+\item $k_{1}$ = $k_{2}$
+\end{itemize}
+Hence f is injective. \\
+
+\underline{To show f is surjective:}
+Suppose n $\in 2\mathbb{Z}$. Then n = 2k for some k $\in \mathbb{Z}$. Hence f(k) = 2k = n, so f is surjective. \\
+
+Thus, f is a bijection from $\mathbb{Z}$ to 2$\mathbb{Z}$ \\
+$\therefore$ $|\mathbb{Z}|$ = $|2\mathbb{Z}|$ \\
+
+\underline{Fact:} \\
+
+$|\mathbb{Z}^{+}|$ = $|\mathbb{Z}|$ \\
+
+The function f: $\mathbb{Z}^{+} \longrightarrow \mathbb{Z}$ defined by;
+
+\[ \begin{cases} 
+      \frac{n}{2} & if n \in \mathbb{Z}^{+} is even \\
+      -\frac{(n-1)}{2} & if n \in \mathbb{Z}^{+} is odd
+   \end{cases}
+\]
+
+ 
 \section{Logical Equivalences}
 
 Given any statement variables '\textit{p}', '\textit{q}' and '\textit{r}', a tautology '\textbf{t}' and contradiction '\textbf{c}', the following
